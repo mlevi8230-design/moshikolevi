@@ -1,17 +1,91 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="דף הבית" description="מושיקו לוי — מטפל קוגנטיבי-חוויתי LI-CBT בגישת ACT. קליניקה בגני תקווה ואונליין.">
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-violet-50 to-white py-16 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-4">
+        מושיקו לוי<br />
+        <span class="text-violet-600">טיפול קוגנטיבי-חוויתי</span>
+      </h1>
+      <p class="text-gray-600 text-lg leading-relaxed mb-8">
+        מטפל מוסמך LI-CBT בגישת קבלה ומחויבות (ACT).<br />
+        קליניקה <strong>בגני תקווה</strong> ובמפגשים <strong>אונליין</strong>.
+      </p>
+      <a href="/contact" class="inline-block bg-violet-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-violet-700 transition-colors shadow-md">
+        ליצירת קשר
+      </a>
+    </div>
+  </section>
+
+  <!-- היכרות -->
+  <section class="max-w-3xl mx-auto px-4 py-14">
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-10">
+      <p class="text-gray-500 text-sm font-medium mb-2">נעים מאוד</p>
+      <p class="text-gray-700 leading-relaxed text-lg mb-4">
+        שמי מושיקו לוי, מטפל מוסמך LI-CBT בגישת קבלה ומחויבות (ACT).
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        אני מאמין שטיפול לא חייב להתקיים רק בין ארבעה קירות — אלא יכול לשלב גם
+        <strong>שמחה, יצירה וחוויות חיים</strong> שלעתים נדחקות לשוליים ביומיום שלנו.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        לצד תהליך מובנה וממוקד, נפתח גם מרחב לחיבור לעולם הרוח, לדמיון ולחלקים שבנו שמבקשים פשוט להיות.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        אם אתם חווים <strong>מתח, חרדה, דכדוך, תקיעות</strong> או קושי בקבלת החלטות —
+        ייתכן שזה המקום בו שינוי יכול להתחיל.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="/contact" class="text-center bg-violet-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-violet-700 transition-colors">
+          ליצירת קשר
+        </a>
+        <a href="/treatment" class="text-center border border-violet-300 text-violet-700 px-6 py-2.5 rounded-full font-medium hover:bg-violet-50 transition-colors">
+          על שיטת הטיפול
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- במה אני יכול לעזור -->
+  <section class="bg-violet-50 py-14 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">במה אני יכול לעזור?</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {['חרדה', 'דכדוך', 'מתח ולחץ', 'תקיעות', 'קושי בקבלת החלטות', 'מחשבות טורדניות'].map(item => (
+          <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-violet-100">
+            <p class="text-gray-700 font-medium">{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- המלצות -->
+  <section class="max-w-3xl mx-auto px-4 py-14">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">מה אומרים מטופלים</h2>
+    <div class="space-y-6">
+      <blockquote class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+        <p class="text-gray-600 leading-relaxed italic mb-4">
+          "הגעתי למושיקו עם צורך למצוא את הדפוסים המגבילים שלי ולקבל כלים לשנות אותם ולהתמודד איתם.
+          מושיקו עזר לי לראות את הדברים בצורה ברורה ולימד אותי כלים מעשיים בהם אני משתמשת גם היום.
+          בשונה מכל טיפול אחר שחוויתי, פה עסקנו בדברים ברגע האמת ולראשונה הצטיידתי בכלים פרקטיים."
+        </p>
+        <footer class="text-sm text-violet-600 font-medium">— מטופלת</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA תחתון -->
+  <section class="bg-gray-800 text-white py-14 px-4 text-center">
+    <h2 class="text-2xl font-bold mb-3">אשמח להיפגש</h2>
+    <p class="text-gray-300 mb-6">שיחת היכרות ראשונה ללא עלות</p>
+    <a href="/contact" class="inline-block bg-white text-gray-800 px-8 py-3 rounded-full font-bold hover:bg-violet-50 transition-colors">
+      לתיאום פגישה
+    </a>
+  </section>
+
+</BaseLayout>
