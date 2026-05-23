@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="קצת עליי" description="מושיקו לוי — מטפל LI-CBT, צייר, תושב גני תקווה">
+
+  <section class="bg-violet-50 py-12 px-4 text-center">
+    <h1 class="text-3xl font-bold text-gray-800">קצת עלי</h1>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10">
+
+      <!-- תמונה -->
+      <div class="flex justify-center mb-8">
+        <div class="w-36 h-36 rounded-full bg-violet-100 overflow-hidden border-4 border-violet-200">
+          <img src="/images/about/profile.jpg" alt="מושיקו לוי" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+        </div>
+      </div>
+
+      <p class="text-gray-700 leading-relaxed mb-4">
+        שמי מושיקו לוי, תושב גני תקווה, אב לשני ילדים אהובים ובן זוג של נלי.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        לאחר שני עשורים בהם פעלתי בעולם ההייטק, בתפקידים בכירים שכללו ניהול צוותים, פרויקטים וטכנולוגיות בחברות מובילות, הבנתי שהגיע הזמן להגשים תשוקה אחרת. הניסיון שרכשתי בהייטק — שדרש דיוק, יצירתיות, חשיבה אנליטית ויכולת ניהול מורכבות — משתלב כיום בעבודתי כמטפל.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        כיום אני מטפל LI-CBT מוסמך בגישת ACT (קבלה ומחויבות). אני מאמין בלב שלם ששילוב חוויות והעשרת העולם הפנימי הם חלק בלתי נפרד מתהליך ההתפתחות והריפוי.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        עבורי, יצירתיות וחוויה הן דרך חיים — אני מביא זאת לידי ביטוי ב<a href="/art" class="text-violet-600 hover:underline">ציור</a> ובהנחיית מדיטציות בגישת אושו.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        החיבור בין עולם ההייטק לבין עולם הטיפול — בין הראש ללב, בין מבנים לגמישות — מאפשר לי ליצור מרחב טיפולי עשיר, מדויק ועמוק.
+      </p>
+    </div>
+  </section>
+
+  <!-- חשוב לדעת -->
+  <section class="max-w-3xl mx-auto px-4 pb-12">
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+      <h3 class="font-bold text-amber-800 mb-3">חשוב שתדעו</h3>
+      <ul class="space-y-2 text-sm text-amber-700">
+        <li>• אני איני פסיכולוג ואינני מוסמך לבצע אבחונים קליניים</li>
+        <li>• הטיפול אינו מהווה תחליף להמלצות רפואיות</li>
+        <li>• הטיפול מבוסס על גישות מוכחות מעולמות ה-CBT וה-ACT, ומציע ליווי רגשי מקצועי בגישה אנושית ומכילה</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="py-8 px-4 text-center">
+    <a href="/contact" class="inline-block bg-violet-600 text-white px-8 py-3 rounded-full font-bold hover:bg-violet-700 transition-colors">
+      ליצירת קשר
+    </a>
+  </section>
+
+</BaseLayout>
