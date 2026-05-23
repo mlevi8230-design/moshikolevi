@@ -4,98 +4,93 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="שיטת הטיפול" description="טיפול LI-CBT בגישת ACT — מה זה אומר ואיך זה עובד">
 
-  <section class="bg-violet-50 py-12 px-4 text-center">
-    <h1 class="text-3xl font-bold text-gray-800">שיטת הטיפול</h1>
-    <p class="text-gray-500 mt-2">טיפול LI-CBT · ACT · CBT</p>
-  </section>
+  <section class="max-w-3xl mx-auto px-6 pt-14 pb-12">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">שיטת הטיפול</h1>
+    <p class="text-center text-gray-400 text-sm mb-12">טיפול LI-CBT · ACT · CBT</p>
 
-  <section class="max-w-3xl mx-auto px-4 py-12 space-y-6">
-
-    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-      <h2 class="text-xl font-bold text-violet-700 mb-1">CBT — Cognitive Behavior Therapy</h2>
+    <!-- CBT -->
+    <div class="mb-8">
+      <h2 class="text-xl font-bold text-gray-800 mb-1">CBT — Cognitive Behavior Therapy</h2>
       <p class="text-sm text-gray-400 mb-3">טיפול קוגנטיבי-התנהגותי</p>
       <p class="text-gray-600 leading-relaxed">
-        טיפול קוגנטיבי-התנהגותי הוא גישה מובנית, ממוקדת מטרה ומבוססת ראיות. הוא מתמקד בזיהוי דפוסי חשיבה והתנהגות שגורמים לנו לסבל, ובמתן כלים לשנות אותם לשיינו.
+        טיפול קוגנטיבי-התנהגותי הוא גישה מובנית, ממוקדת מטרה ומבוססת ראיות. הוא מתמקד בזיהוי דפוסי חשיבה והתנהגות שגורמים לנו לסבל, ובמתן כלים לשנות אותם.
       </p>
     </div>
 
-    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-      <h2 class="text-xl font-bold text-violet-700 mb-1">LI — Low Intensity</h2>
+    <hr class="border-gray-100 mb-8" />
+
+    <!-- LI -->
+    <div class="mb-8">
+      <h2 class="text-xl font-bold text-gray-800 mb-1">LI — Low Intensity</h2>
       <p class="text-sm text-gray-400 mb-3">טיפול בעצימות נמוכה</p>
       <p class="text-gray-600 leading-relaxed">
         טיפול בעצימות נמוכה, המאפשר מענה קצר וממוקד לצרכים של המטופל. יעיל במיוחד עבור חרדה, דכדוך ולחץ יומיומי.
       </p>
     </div>
 
-    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-      <h2 class="text-xl font-bold text-violet-700 mb-1">ACT — Acceptance and Commitment Therapy</h2>
+    <hr class="border-gray-100 mb-8" />
+
+    <!-- ACT -->
+    <div class="mb-12">
+      <h2 class="text-xl font-bold text-gray-800 mb-1">ACT — Acceptance and Commitment Therapy</h2>
       <p class="text-sm text-gray-400 mb-3">טיפול בקבלה ומחויבות</p>
       <p class="text-gray-600 leading-relaxed mb-4">
-        גישה טיפולית המתמקדת בקבלה של מחשבות ורגשות — גם כאלה שמסבים לנו כאב — ובמחויבות לפעול בהתאם לערכים שלנו, במקום להימנע מהחוויה הפנימית.
+        גישה טיפולית המתמקדת בקבלה של מחשבות ורגשות — גם כאלה שמסבים לנו כאב — ובמחויבות לפעול בהתאם לערכים שלנו.
       </p>
       <p class="text-gray-600 leading-relaxed">
         ACT לא שואל "איך לא לחשוב את המחשבה הזו" אלא "איך אוכל לחיות חיים מלאים ומשמעותיים גם כשהמחשבה הזו נוכחת".
       </p>
     </div>
 
-  </section>
-
-  <!-- לאיזה מצבים מתאים -->
-  <section class="bg-gray-50 py-12 px-4">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">לאיזה מצבים מתאים התהליך?</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-        {['חרדה', 'דכדוך', 'לחץ', 'קשי התמודדות', 'תקיעות', 'מחשבות טורדניות'].map(item => (
-          <div class="bg-white rounded-xl p-4 text-center border border-violet-100 shadow-sm">
-            <p class="text-gray-700">{item}</p>
-          </div>
-        ))}
-      </div>
-      <p class="text-center text-sm text-gray-500 mt-6">
-        הטיפול פתוח בפני
-        <a href="/contact" class="text-violet-600 hover:underline">להתנסות ולמצוא את הדרך שלכם</a>.
-      </p>
+    <!-- לאיזה מצבים מתאים -->
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">לאיזה מצבים מתאים התהליך?</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-12">
+      {['חרדה', 'דכדוך', 'לחץ', 'קשי התמודדות', 'תקיעות', 'מחשבות טורדניות'].map(item => (
+        <div class="border border-gray-200 rounded-lg p-4 text-center">
+          <p class="text-gray-700">{item}</p>
+        </div>
+      ))}
     </div>
-  </section>
 
-  <!-- חשוב לדעת -->
-  <section class="max-w-3xl mx-auto px-4 py-12">
-    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
-      <h3 class="font-bold text-amber-800 mb-3">חשוב לדעת</h3>
-      <ul class="space-y-2 text-sm text-amber-700">
+    <!-- מה אני מציע -->
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">מה אני מציע</h2>
+    <ul class="space-y-3 mb-12">
+      {[
+        'טיפול LI-CBT ממוקד ומובנה',
+        'תהליך מותאם אישית, בקצב שלך',
+        'כלים מעשיים לשינוי דפוסי מחשבה',
+        'חיבור לשילוב של יצירה, גמישות וחוויות',
+        'חדר בטוח, קשוב ואנושי',
+        'מפגשים פרונטאליים בגני תקווה או אונליין',
+      ].map(item => (
+        <li class="flex items-start gap-3">
+          <span class="text-[#5ba4a4] font-bold mt-0.5">✓</span>
+          <span class="text-gray-700">{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <!-- חשוב לדעת -->
+    <div class="border border-amber-200 bg-amber-50 rounded-lg p-5 mb-12 text-sm text-amber-800">
+      <p class="font-semibold mb-2">חשוב לדעת</p>
+      <ul class="space-y-1">
         <li>• אני איני פסיכולוג ואינני מוסמך לבצע אבחונים קליניים</li>
         <li>• הטיפול אינו מהווה תחליף להמלצות רפואיות</li>
         <li>• אני איני עוסק בטיפול במקרים פסיכיאטריים, הפרעות סכיזופרניה, OCD חמור ואנשים לאחר אשפוז</li>
       </ul>
     </div>
-  </section>
 
-  <!-- מה אני מציע -->
-  <section class="bg-violet-50 py-12 px-4">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">מה אני מציע</h2>
-      <ul class="space-y-3">
-        {[
-          'טיפול LI-CBT ממוקד ומובנה',
-          'תהליך מותאם אישי, בקצב שלך',
-          'כלים מעשיים לשינוי דפוסי מחשבה',
-          'חיבור לשילוב של יצירה, נמישות וחוויות תחושות מסוגלות',
-          'חדר בטוח, קצוני ואנושי',
-          'מפגשים פרונטאליים בגני תקווה או באנגלין',
-        ].map(item => (
-          <li class="flex items-start gap-3 bg-white rounded-xl p-4 border border-violet-100 shadow-sm">
-            <span class="text-violet-500 mt-0.5">✓</span>
-            <span class="text-gray-700">{item}</span>
-          </li>
-        ))}
-      </ul>
+    <div class="text-center">
+      <a
+        href="/contact"
+        class="inline-block text-white font-medium px-8 py-3 rounded-full transition-colors"
+        style="background-color: #5ba4a4;"
+        onmouseover="this.style.backgroundColor='#4a8a8a'"
+        onmouseout="this.style.backgroundColor='#5ba4a4'"
+      >
+        לתיאום פגישה ראשונה
+      </a>
     </div>
-  </section>
-
-  <section class="py-12 px-4 text-center">
-    <a href="/contact" class="inline-block bg-violet-600 text-white px-8 py-3 rounded-full font-bold hover:bg-violet-700 transition-colors">
-      לתיאום פגישה ראשונה
-    </a>
   </section>
 
 </BaseLayout>

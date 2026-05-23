@@ -11,90 +11,90 @@ const therapyLinks = [
 
 const artLinks = [
   { href: '/art', label: 'אמנות' },
-  { href: '/gallery', label: 'גלריה' },
-  { href: '/for-sale', label: 'ציורים למכירה' },
-  { href: '/portrait', label: 'ציור על פי תמונה' },
-  { href: '/exhibitions', label: 'תערוכות' },
+  { href: '/art/gallery', label: 'גלריה' },
+  { href: '/art/for-sale', label: 'ציורים למכירה' },
+  { href: '/art/portrait', label: 'ציור על פי תמונה' },
 ];
 
-const isArtPage = ['/art', '/gallery', '/for-sale', '/portrait', '/custom', '/exhibitions'].some(p => currentPath.startsWith(p));
+const isArtPage = ['/art'].some(p => currentPath.startsWith(p));
 const isMeditationPage = currentPath.startsWith('/meditation');
+const activeLinks = isArtPage ? artLinks : therapyLinks;
+const homeHref = isArtPage ? '/art' : isMeditationPage ? '/meditation' : '/';
 ---
 
-<header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-  <div class="max-w-5xl mx-auto px-4">
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
 
-    <!-- עולמות עליונים — טיפול / אמנות / מדיטציה -->
-    <div class="flex justify-center gap-8 pt-3 pb-1 border-b border-gray-100 text-sm">
-      <a href="/" class={`flex flex-col items-center gap-1 px-3 py-1 rounded-lg transition-colors ${!isArtPage && !isMeditationPage ? 'text-violet-700 font-semibold' : 'text-gray-500 hover:text-violet-600'}`}>
-        <span class="text-xl">🌿</span>
-        <span>טיפול</span>
-      </a>
-      <a href="/art" class={`flex flex-col items-center gap-1 px-3 py-1 rounded-lg transition-colors ${isArtPage ? 'text-violet-700 font-semibold' : 'text-gray-500 hover:text-violet-600'}`}>
-        <span class="text-xl">🎨</span>
-        <span>אמנות</span>
-      </a>
-      <a href="/meditation" class={`flex flex-col items-center gap-1 px-3 py-1 rounded-lg transition-colors ${isMeditationPage ? 'text-violet-700 font-semibold' : 'text-gray-500 hover:text-violet-600'}`}>
-        <span class="text-xl">🧘</span>
-        <span>מדיטציה</span>
-      </a>
-    </div>
+    <!-- לוגו + שם -->
+    <a href={homeHref} class="flex items-center gap-2 shrink-0">
+      <img src="/images/about/logo.png" alt="מושיקו לוי" class="w-10 h-10 object-contain" />
+    </a>
 
-    <!-- כותרת -->
-    <div class="text-center py-2">
-      <a href={isArtPage ? '/art' : isMeditationPage ? '/meditation' : '/'} class="text-lg font-bold text-gray-800 hover:text-violet-700 transition-colors">
-        מושיקו לוי
-      </a>
-    </div>
+    <!-- ניווט ראשי — דסקטופ -->
+    <nav class="hidden md:flex items-center gap-1 flex-1 justify-center">
+      {activeLinks.map(link => (
+        <a
+          href={link.href}
+          class={`px-3 py-1.5 rounded text-sm transition-colors ${
+            currentPath === link.href
+              ? 'text-[#5ba4a4] font-semibold'
+              : 'text-gray-600 hover:text-[#5ba4a4]'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+      {!isArtPage && !isMeditationPage && (
+        <a href="/art" class="px-3 py-1.5 rounded text-sm text-gray-400 hover:text-[#5ba4a4] transition-colors border-r border-gray-200 mr-1 pr-3">
+          אמנות
+        </a>
+      )}
+      {isArtPage && (
+        <a href="/" class="px-3 py-1.5 rounded text-sm text-gray-400 hover:text-[#5ba4a4] transition-colors border-r border-gray-200 mr-1 pr-3">
+          טיפול
+        </a>
+      )}
+    </nav>
 
-    <!-- תת-ניווט: טיפול -->
-    {!isArtPage && !isMeditationPage && (
-      <nav class="hidden md:flex justify-center gap-1 pb-2">
-        {therapyLinks.map(link => (
-          <a
-            href={link.href}
-            class={`px-3 py-1 rounded-full text-sm transition-colors ${currentPath === link.href ? 'bg-violet-100 text-violet-700 font-medium' : 'text-gray-600 hover:bg-gray-100'}`}
-          >
-            {link.label}
-          </a>
-        ))}
-      </nav>
-    )}
-
-    <!-- תת-ניווט: אמנות -->
-    {isArtPage && (
-      <nav class="hidden md:flex justify-center gap-1 pb-2">
-        {artLinks.map(link => (
-          <a
-            href={link.href}
-            class={`px-3 py-1 rounded-full text-sm transition-colors ${currentPath === link.href ? 'bg-violet-100 text-violet-700 font-medium' : 'text-gray-600 hover:bg-gray-100'}`}
-          >
-            {link.label}
-          </a>
-        ))}
-      </nav>
-    )}
+    <!-- כפתור ליצירת קשר — דסקטופ -->
+    <a
+      href="/contact"
+      class="hidden md:inline-block shrink-0 text-sm font-medium text-white px-5 py-2 rounded-full transition-colors"
+      style="background-color: #5ba4a4;"
+      onmouseover="this.style.backgroundColor='#4a8a8a'"
+      onmouseout="this.style.backgroundColor='#5ba4a4'"
+    >
+      ליצירת קשר
+    </a>
 
     <!-- מובייל: המבורגר -->
-    <div class="md:hidden flex justify-between items-center pb-2">
-      <button id="menu-btn" class="p-2 rounded-lg text-gray-600 hover:bg-gray-100" aria-label="תפריט">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-      <a href="/contact" class="text-sm bg-violet-600 text-white px-4 py-1.5 rounded-full hover:bg-violet-700 transition-colors">
-        ליצירת קשר
-      </a>
-    </div>
+    <button id="menu-btn" class="md:hidden p-2 text-gray-600 hover:text-[#5ba4a4]" aria-label="תפריט">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
   </div>
 
   <!-- מובייל: תפריט נפתח -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-3">
-    {(!isArtPage && !isMeditationPage ? therapyLinks : isArtPage ? artLinks : []).map(link => (
-      <a href={link.href} class="block py-2 text-gray-700 hover:text-violet-700 border-b border-gray-50 last:border-0">
-        {link.label}
-      </a>
-    ))}
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 py-2">
+      {activeLinks.map(link => (
+        <a
+          href={link.href}
+          class={`block py-3 text-sm border-b border-gray-50 last:border-0 transition-colors ${
+            currentPath === link.href ? 'text-[#5ba4a4] font-semibold' : 'text-gray-700 hover:text-[#5ba4a4]'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+      {!isArtPage && (
+        <a href="/art" class="block py-3 text-sm text-gray-500 hover:text-[#5ba4a4]">אמנות</a>
+      )}
+      <div class="pt-3 pb-2">
+        <a href="/contact" class="btn-teal text-sm text-center w-full block">ליצירת קשר</a>
+      </div>
+    </div>
   </div>
 </header>
 

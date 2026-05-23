@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="ציור על פי תמונה" description="הזמנת ציור אישי — פורטרייט, ציורי הנצחה, ציורים מתמונה">
+
+  <section class="max-w-3xl mx-auto px-6 pt-14 pb-16">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">ציור על פי תמונה</h1>
+    <p class="text-center text-gray-400 text-sm mb-12">הזמנת ציור אישי — פורטרייטים, ציורי הנצחה</p>
+
+    <!-- דוגמאות -->
+    <div class="grid grid-cols-2 gap-4 mb-12">
+      <div class="overflow-hidden rounded-lg aspect-square bg-gray-50">
+        <img
+          src="/images/for-sale/custom-portrait-1.jpg"
+          alt="דוגמה לציור על פי תמונה"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div class="overflow-hidden rounded-lg aspect-square bg-gray-50">
+        <img
+          src="/images/for-sale/custom-portrait-2.jpg"
+          alt="דוגמה לציור על פי תמונה"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- הסבר -->
+    <div class="space-y-5 mb-12 text-gray-600 leading-relaxed">
+      <p>
+        אני מציע ציורים דיגיטליים אישיים על בסיס תמונה — מתאים לפורטרייטים, ציורי הנצחה, מתנות מיוחדות וכל רגע שחשוב לכם לשמר.
+      </p>
+      <p>
+        כל ציור נוצר בקפידה ובתשומת לב לפרטים, בסגנון שמתאים לאופי התמונה ולבקשה שלכם.
+      </p>
+      <p>
+        לאחר קבלת הציור תוכלו להדפיסו בכל גודל שתרצו.
+      </p>
+    </div>
+
+    <!-- שלבי ההזמנה -->
+    <h2 class="text-xl font-bold text-gray-800 mb-5">איך מזמינים?</h2>
+    <ol class="space-y-4 mb-12">
+      {[
+        'שלחו הודעה ב-WhatsApp עם התמונה שלכם',
+        'נדון בסגנון, הגודל והציפיות',
+        'תוך מספר ימים הציור מוכן ונשלח אליכם',
+      ].map((step, i) => (
+        <li class="flex items-start gap-3">
+          <span class="w-7 h-7 rounded-full text-white text-sm flex items-center justify-center shrink-0 font-bold" style="background-color: #5ba4a4;">
+            {i + 1}
+          </span>
+          <span class="text-gray-600 leading-relaxed pt-0.5">{step}</span>
+        </li>
+      ))}
+    </ol>
+
+    <div class="text-center">
+      <a
+        href="https://wa.me/+972542400106"
+        target="_blank"
+        rel="noopener"
+        class="inline-block text-white font-medium px-8 py-3 rounded-full transition-colors"
+        style="background-color: #5ba4a4;"
+        onmouseover="this.style.backgroundColor='#4a8a8a'"
+        onmouseout="this.style.backgroundColor='#5ba4a4'"
+      >
+        הזמינו עכשיו ב-WhatsApp
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

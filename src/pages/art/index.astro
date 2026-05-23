@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="אמנות" description="מושיקו לוי — ציור דיגיטלי ואמנות חזותית">
+
+  <section class="max-w-3xl mx-auto px-6 pt-14 pb-12">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4 text-center">אמנות</h1>
+    <p class="text-center text-gray-500 leading-relaxed mb-12 max-w-xl mx-auto">
+      לצד עבודתי כמטפל, אמנות היא דרך חיים עבורי — אני מצייר דיגיטלית ובמדיות שונות, ומוצא בה חיבור לעולם הפנימי.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+      <!-- גלריה -->
+      <a href="/art/gallery" class="group block border border-gray-200 rounded-lg overflow-hidden hover:border-[#5ba4a4] transition-colors">
+        <div class="aspect-square overflow-hidden bg-gray-50">
+          <img
+            src="/images/gallery/warrior.jpg"
+            alt="גלריה"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h2 class="font-bold text-gray-800 mb-1">גלריה</h2>
+          <p class="text-sm text-gray-500">אוסף עבודות — ציורים דיגיטליים, פורטרייטים, נופים</p>
+        </div>
+      </a>
+
+      <!-- ציורים למכירה -->
+      <a href="/art/for-sale" class="group block border border-gray-200 rounded-lg overflow-hidden hover:border-[#5ba4a4] transition-colors">
+        <div class="aspect-square overflow-hidden bg-gray-50">
+          <img
+            src="/images/for-sale/artwork-2.jpg"
+            alt="ציורים למכירה"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h2 class="font-bold text-gray-800 mb-1">ציורים למכירה</h2>
+          <p class="text-sm text-gray-500">עבודות זמינות לרכישה — הדפסים ומקוריות</p>
+        </div>
+      </a>
+
+      <!-- ציור על פי תמונה -->
+      <a href="/art/portrait" class="group block border border-gray-200 rounded-lg overflow-hidden hover:border-[#5ba4a4] transition-colors">
+        <div class="aspect-square overflow-hidden bg-gray-50">
+          <img
+            src="/images/for-sale/custom-portrait-1.jpg"
+            alt="ציור על פי תמונה"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+        </div>
+        <div class="p-4">
+          <h2 class="font-bold text-gray-800 mb-1">ציור על פי תמונה</h2>
+          <p class="text-sm text-gray-500">הזמנת ציור אישי — פורטרייט, ציורי הנצחה</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

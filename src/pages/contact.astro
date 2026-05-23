@@ -4,64 +4,61 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="יצירת קשר" description="צרו קשר עם מושיקו לוי — טלפון, מייל, WhatsApp">
 
-  <section class="bg-violet-50 py-12 px-4 text-center">
-    <h1 class="text-3xl font-bold text-gray-800">יצירת קשר</h1>
-    <p class="text-gray-500 mt-2">מוזמנים להיות בקשר לכל שאלה או בירור</p>
-  </section>
+  <section class="max-w-2xl mx-auto px-6 pt-14 pb-16">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">יצירת קשר</h1>
+    <p class="text-center text-gray-400 text-sm mb-12">מוזמנים להיות בקשר לכל שאלה או בירור</p>
 
-  <section class="max-w-3xl mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="space-y-4">
 
-      <!-- טלפון + WhatsApp -->
-      <a href="tel:+972542400106" class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex items-center gap-4 hover:border-violet-300 hover:shadow-md transition-all group">
-        <div class="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center text-violet-600 group-hover:bg-violet-200 transition-colors text-xl">
+      <!-- טלפון -->
+      <a href="tel:+972542400106" class="flex items-center gap-5 p-5 border border-gray-200 rounded-lg hover:border-[#5ba4a4] transition-colors group">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center text-xl shrink-0" style="background-color: #e8f5f5;">
           📞
         </div>
         <div>
-          <p class="text-sm text-gray-400 mb-0.5">טלפון</p>
+          <p class="text-xs text-gray-400 mb-0.5">טלפון</p>
           <p class="font-bold text-gray-800 text-lg">054-240-0106</p>
         </div>
       </a>
 
       <!-- WhatsApp -->
-      <a href="https://wa.me/+972542400106" target="_blank" rel="noopener" class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex items-center gap-4 hover:border-green-300 hover:shadow-md transition-all group">
-        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 group-hover:bg-green-200 transition-colors text-xl">
+      <a href="https://wa.me/+972542400106" target="_blank" rel="noopener" class="flex items-center gap-5 p-5 border border-gray-200 rounded-lg hover:border-green-400 transition-colors group">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center text-xl shrink-0 bg-green-50">
           💬
         </div>
         <div>
-          <p class="text-sm text-gray-400 mb-0.5">WhatsApp</p>
-          <p class="font-bold text-gray-800 text-lg">שלחו הודעה</p>
+          <p class="text-xs text-gray-400 mb-0.5">WhatsApp</p>
+          <p class="font-bold text-gray-800">שלחו הודעה</p>
         </div>
       </a>
 
       <!-- מייל -->
-      <a href="mailto:mlevi8230@gmail.com" class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex items-center gap-4 hover:border-violet-300 hover:shadow-md transition-all group">
-        <div class="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center text-violet-600 group-hover:bg-violet-200 transition-colors text-xl">
+      <a href="mailto:mlevi8230@gmail.com" class="flex items-center gap-5 p-5 border border-gray-200 rounded-lg hover:border-[#5ba4a4] transition-colors group">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center text-xl shrink-0" style="background-color: #e8f5f5;">
           ✉️
         </div>
         <div>
-          <p class="text-sm text-gray-400 mb-0.5">אימייל</p>
+          <p class="text-xs text-gray-400 mb-0.5">אימייל</p>
           <p class="font-bold text-gray-800">mlevi8230@gmail.com</p>
         </div>
       </a>
 
       <!-- כתובת -->
-      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex items-center gap-4">
-        <div class="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center text-violet-600 text-xl">
+      <div class="flex items-center gap-5 p-5 border border-gray-200 rounded-lg">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center text-xl shrink-0" style="background-color: #e8f5f5;">
           📍
         </div>
         <div>
-          <p class="text-sm text-gray-400 mb-0.5">כתובת</p>
+          <p class="text-xs text-gray-400 mb-0.5">כתובת</p>
           <p class="font-bold text-gray-800">רחוב התבור 7</p>
-          <p class="text-gray-600">גני תקווה</p>
+          <p class="text-gray-600 text-sm">גני תקווה</p>
         </div>
       </div>
-
     </div>
 
     <!-- רשתות חברתיות -->
-    <div class="mt-8 bg-white rounded-2xl border border-gray-100 shadow-sm p-6 text-center">
-      <p class="text-gray-500 text-sm mb-4">עקבו אחרי</p>
+    <div class="mt-10 text-center">
+      <p class="text-gray-400 text-sm mb-4">עקבו אחרי</p>
       <div class="flex justify-center gap-6">
         <a href="https://www.instagram.com/moshikoleviart/" target="_blank" rel="noopener" class="text-gray-400 hover:text-pink-500 transition-colors" aria-label="Instagram">
           <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">

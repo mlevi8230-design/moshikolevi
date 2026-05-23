@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const artworks = [
+  { src: '/images/gallery/warrior.jpg', title: 'Warrior' },
+  { src: '/images/gallery/golden-years.jpg', title: 'Golden Years' },
+  { src: '/images/gallery/indian-serenity.jpg', title: 'Indian Serenity' },
+  { src: '/images/gallery/mother-earth.jpg', title: 'Mother Earth' },
+  { src: '/images/gallery/baby-buddha.jpg', title: 'Baby Buddha' },
+  { src: '/images/gallery/japanese-story.jpg', title: 'Japanese Story' },
+  { src: '/images/gallery/free-rotation.jpg', title: 'Free Rotation' },
+  { src: '/images/gallery/quiet.jpg', title: 'Quiet' },
+  { src: '/images/gallery/bob.jpg', title: 'Bob' },
+  { src: '/images/gallery/spidey-2.jpg', title: 'Spidey 2' },
+  { src: '/images/gallery/spidey-1.jpg', title: 'Spidey 1' },
+  { src: '/images/gallery/mighty.jpg', title: 'Mighty' },
+  { src: '/images/gallery/return-from-the-aura.jpg', title: 'Return from the Aura' },
+  { src: '/images/gallery/wild-sunset.jpg', title: 'Wild Sunset' },
+  { src: '/images/gallery/reflected.jpg', title: 'Reflected' },
+  { src: '/images/gallery/fishing-in-fog.jpg', title: 'Fishing in Fog' },
+  { src: '/images/gallery/decompose.jpg', title: 'Decompose' },
+  { src: '/images/gallery/drawing-in-drawing.jpg', title: 'Drawing in Drawing in Drawing' },
+  { src: '/images/gallery/diving.jpg', title: 'Diving' },
+  { src: '/images/gallery/sea-fantasy.jpg', title: 'Sea Fantasy' },
+  { src: '/images/gallery/love-is-love.jpg', title: 'Love is Love' },
+  { src: '/images/gallery/100-days-1.jpg', title: '100 Days' },
+  { src: '/images/gallery/nirvana.jpg', title: 'Nirvana' },
+  { src: '/images/gallery/pepperoni-woman.jpg', title: 'Pepperoni Woman' },
+  { src: '/images/gallery/japanese-experience.jpg', title: 'Japanese Experience' },
+  { src: '/images/gallery/go-slowly.jpg', title: 'Go Slowly' },
+  { src: '/images/gallery/broken-heart.jpg', title: 'Broken Heart' },
+  { src: '/images/gallery/rickshaw.jpg', title: 'Rickshaw' },
+  { src: '/images/gallery/meditation-on-the-beach.jpg', title: 'Meditation on the Beach' },
+  { src: '/images/gallery/wild-stripes.jpg', title: 'Wild Stripes' },
+  { src: '/images/gallery/psychedelic.jpg', title: 'Psychedelic' },
+];
+---
+
+<BaseLayout title="גלריה" description="גלריה של מושיקו לוי — ציורים דיגיטליים ועבודות אמנות">
+
+  <section class="max-w-5xl mx-auto px-6 pt-14 pb-16">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">גלריה</h1>
+    <p class="text-center text-gray-400 text-sm mb-10">ציורים דיגיטליים ועבודות אמנות</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      {artworks.map(art => (
+        <div class="group overflow-hidden rounded-lg bg-gray-50 aspect-square cursor-zoom-in" onclick={`openLightbox('${art.src}', '${art.title}')`}>
+          <img
+            src={art.src}
+            alt={art.title}
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center p-4" onclick="closeLightbox()">
+    <button class="absolute top-4 left-4 text-white text-3xl" aria-label="סגור">×</button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded" />
+    <p id="lightbox-title" class="absolute bottom-4 text-white text-sm"></p>
+  </div>
+
+</BaseLayout>
+
+<script>
+  function openLightbox(src: string, title: string) {
+    const lb = document.getElementById('lightbox')!;
+    const img = document.getElementById('lightbox-img') as HTMLImageElement;
+    const t = document.getElementById('lightbox-title')!;
+    img.src = src;
+    img.alt = title;
+    t.textContent = title;
+    lb.classList.remove('hidden');
+    lb.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    const lb = document.getElementById('lightbox')!;
+    lb.classList.add('hidden');
+    lb.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  (window as any).openLightbox = openLightbox;
+  (window as any).closeLightbox = closeLightbox;
+</script>

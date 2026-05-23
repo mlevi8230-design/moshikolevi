@@ -4,88 +4,86 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="דף הבית" description="מושיקו לוי — מטפל קוגנטיבי-חוויתי LI-CBT בגישת ACT. קליניקה בגני תקווה ואונליין.">
 
-  <!-- Hero -->
-  <section class="bg-gradient-to-b from-violet-50 to-white py-16 px-4">
-    <div class="max-w-2xl mx-auto text-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-4">
-        מושיקו לוי<br />
-        <span class="text-violet-600">טיפול קוגנטיבי-חוויתי</span>
-      </h1>
-      <p class="text-gray-600 text-lg leading-relaxed mb-8">
-        מטפל מוסמך LI-CBT בגישת קבלה ומחויבות (ACT).<br />
-        קליניקה <strong>בגני תקווה</strong> ובמפגשים <strong>אונליין</strong>.
-      </p>
-      <a href="/contact" class="inline-block bg-violet-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-violet-700 transition-colors shadow-md">
-        ליצירת קשר
-      </a>
-    </div>
+  <!-- Hero text -->
+  <section class="max-w-3xl mx-auto px-6 pt-16 pb-8 text-center">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-snug">
+      מושיקו לוי — טיפול קוגנטיבי חוויתי
+    </h1>
+    <a
+      href="/contact"
+      class="inline-block text-white font-medium px-8 py-3 rounded-full text-base transition-colors"
+      style="background-color: #5ba4a4;"
+      onmouseover="this.style.backgroundColor='#4a8a8a'"
+      onmouseout="this.style.backgroundColor='#5ba4a4'"
+    >
+      ליצירת קשר
+    </a>
   </section>
 
-  <!-- היכרות -->
-  <section class="max-w-3xl mx-auto px-4 py-14">
-    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-10">
-      <p class="text-gray-500 text-sm font-medium mb-2">נעים מאוד</p>
-      <p class="text-gray-700 leading-relaxed text-lg mb-4">
-        שמי מושיקו לוי, מטפל מוסמך LI-CBT בגישת קבלה ומחויבות (ACT).
-      </p>
-      <p class="text-gray-600 leading-relaxed mb-4">
-        אני מאמין שטיפול לא חייב להתקיים רק בין ארבעה קירות — אלא יכול לשלב גם
-        <strong>שמחה, יצירה וחוויות חיים</strong> שלעתים נדחקות לשוליים ביומיום שלנו.
-      </p>
-      <p class="text-gray-600 leading-relaxed mb-4">
-        לצד תהליך מובנה וממוקד, נפתח גם מרחב לחיבור לעולם הרוח, לדמיון ולחלקים שבנו שמבקשים פשוט להיות.
-      </p>
-      <p class="text-gray-600 leading-relaxed mb-6">
-        אם אתם חווים <strong>מתח, חרדה, דכדוך, תקיעות</strong> או קושי בקבלת החלטות —
-        ייתכן שזה המקום בו שינוי יכול להתחיל.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a href="/contact" class="text-center bg-violet-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-violet-700 transition-colors">
-          ליצירת קשר
-        </a>
-        <a href="/treatment" class="text-center border border-violet-300 text-violet-700 px-6 py-2.5 rounded-full font-medium hover:bg-violet-50 transition-colors">
-          על שיטת הטיפול
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- תוכן ראשי + תמונה -->
+  <section class="max-w-3xl mx-auto px-6 py-10">
+    <p class="text-sm text-gray-400 mb-3">נעים מאוד</p>
 
-  <!-- במה אני יכול לעזור -->
-  <section class="bg-violet-50 py-14 px-4">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">במה אני יכול לעזור?</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {['חרדה', 'דכדוך', 'מתח ולחץ', 'תקיעות', 'קושי בקבלת החלטות', 'מחשבות טורדניות'].map(item => (
-          <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-violet-100">
-            <p class="text-gray-700 font-medium">{item}</p>
-          </div>
-        ))}
-      </div>
+    <p class="text-gray-700 text-lg leading-relaxed mb-5">
+      שמי מושיקו לוי, מטפל מוסמך LI-CBT בגישת קבלה ומחויבות (ACT).
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      בקליניקה ב<strong>גני תקווה</strong> ובמפגשים <strong>אונליין</strong> אני מזמין אתכם למסע טיפולי פנימי.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      אני מאמין שטיפול לא חייב להתקיים רק בין ארבעה קירות — אלא יכול לשלב גם
+      <strong>שמחה, יצירה וחוויות חיים</strong> שלעתים נדחקות לשוליים ביומיום שלנו.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      לצד תהליך מובנה וממוקד, נפתח גם מרחב לחיבור לעולם הרוח, לדמיון ולחלקים שבנו שמבקשים פשוט להיות.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-8">
+      אם אתם חווים <strong>מתח, חרדה, דכדוך, תקיעות</strong> או קושי בקבלת החלטות —
+      ייתכן שזה המקום בו שינוי יכול להתחיל.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-10">
+      אם זה מדבר אליך — או אפילו רק מסקרן אותך — אשמח להיפגש.
+    </p>
+
+    <!-- תמונת הקליניקה -->
+    <div class="flex justify-center my-6">
+      <img
+        src="/images/home/clinic.png"
+        alt="קליניקה של מושיקו לוי"
+        class="rounded-lg max-w-full w-full md:w-2/3 object-cover shadow-sm"
+        loading="lazy"
+      />
     </div>
   </section>
 
   <!-- המלצות -->
-  <section class="max-w-3xl mx-auto px-4 py-14">
-    <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">מה אומרים מטופלים</h2>
-    <div class="space-y-6">
-      <blockquote class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
-        <p class="text-gray-600 leading-relaxed italic mb-4">
-          "הגעתי למושיקו עם צורך למצוא את הדפוסים המגבילים שלי ולקבל כלים לשנות אותם ולהתמודד איתם.
-          מושיקו עזר לי לראות את הדברים בצורה ברורה ולימד אותי כלים מעשיים בהם אני משתמשת גם היום.
-          בשונה מכל טיפול אחר שחוויתי, פה עסקנו בדברים ברגע האמת ולראשונה הצטיידתי בכלים פרקטיים."
-        </p>
-        <footer class="text-sm text-violet-600 font-medium">— מטופלת</footer>
-      </blockquote>
-    </div>
+  <section class="max-w-3xl mx-auto px-6 py-10">
+    <blockquote class="text-gray-600 leading-relaxed text-base italic text-center">
+      "הגעתי לתהליך כשאני ואמונה בעצמי כשני זרים. כבר שכחתי מהי הצלחה, איך היא נראית ואיך היא מרגישה.
+      בתהליך איתך הצלחתי לאט לאט לראות את עצמי במשקפיים של האחר ועל ידי כך חזרתי להכיר בערך עצמי.
+      התהליך מומלץ בחום לכל אחד ואחת ולא רק לשבורי לב."
+    </blockquote>
   </section>
 
   <!-- CTA תחתון -->
-  <section class="bg-gray-800 text-white py-14 px-4 text-center">
-    <h2 class="text-2xl font-bold mb-3">אשמח להיפגש</h2>
-    <p class="text-gray-300 mb-6">שיחת היכרות ראשונה ללא עלות</p>
-    <a href="/contact" class="inline-block bg-white text-gray-800 px-8 py-3 rounded-full font-bold hover:bg-violet-50 transition-colors">
-      לתיאום פגישה
-    </a>
+  <section class="max-w-3xl mx-auto px-6 py-12 text-center">
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a
+        href="/contact"
+        class="inline-block text-white font-medium px-8 py-3 rounded-full transition-colors"
+        style="background-color: #5ba4a4;"
+        onmouseover="this.style.backgroundColor='#4a8a8a'"
+        onmouseout="this.style.backgroundColor='#5ba4a4'"
+      >
+        ליצירת קשר
+      </a>
+      <a
+        href="/treatment"
+        class="inline-block border text-sm font-medium px-8 py-3 rounded-full transition-colors text-gray-600 hover:text-[#5ba4a4] border-gray-300 hover:border-[#5ba4a4]"
+      >
+        על שיטת הטיפול
+      </a>
+    </div>
   </section>
 
 </BaseLayout>
