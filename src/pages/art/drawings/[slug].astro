@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import artworks from '../../../data/artworks.json';
+
+export function getStaticPaths() {
+  return artworks.map(art => ({
+    params: { slug: art.slug },
+    props: { art },
+  }));
+}
+
+const { art } = Astro.props;
+
+const ext = art.imageId ? art.imageId.split('~mv2.').pop()?.split('?')[0] || 'jpg' : 'jpg';
+const imagePath = art.imageId ? `/images/artworks/${art.imageId}` : '';
+
+// סדר ניווט בין יצירות באותה קטגוריה
+const categoryArts = artworks.filter(a => a.category === art.category);
+const idx = categoryArts.findIndex(a => a.slug === art.slug);
+const prev = categoryArts[idx - 1] || null;
+const next = categoryArts[idx + 1] || null;
+
+const isMemorial = art.category === 'memorial';
+---
+
+<BaseLayout title={art.title} description={art.description || `${art.title} — ציור מאת מושיקו לוי`}>
+
+  <section class="max-w-4xl mx-auto px-6 pt-10 pb-16">
+
+    <!-- חזרה לגלריה -->
+    <a href={isMemorial ? '/art/memorial' : '/art/gallery'} class="text-sm text-[#5ba4a4] hover:underline flex items-center gap-1 mb-8">
+      → חזרה לגלריה
+    </a>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+      <!-- תמונה -->
+      <div class="flex justify-center">
+        {imagePath && (
+          <img
+            src={imagePath}
+            alt={art.title}
+            class="rounded-lg max-w-full object-contain shadow-sm max-h-[500px]"
+            loading="eager"
+          />
+        )}
+      </div>
+
+      <!-- פרטים -->
+      <div>
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">{art.title}</h1>
+
+        {art.description && (
+          <p class="text-gray-600 leading-relaxed mb-6">{art.description}</p>
+        )}
+
+        <div class="space-y-2 text-sm mb-8">
+          {art.size && (
+            <div class="flex gap-3">
+              <span class="text-gray-400 w-16 shrink-0">גודל</span>
+              <span class="text-gray-700">{art.size}</span>
+            </div>
+          )}
+          {art.medium && (
+            <div class="flex gap-3">
+              <span class="text-gray-400 w-16 shrink-0">טכניקה</span>
+              <span class="text-gray-700">{art.medium}</span>
+            </div>
+          )}
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <a
+            href="https://wa.me/+972542400106"
+            target="_blank"
+            rel="noopener"
+            class="inline-block text-white font-medium px-6 py-2.5 rounded-full text-sm transition-colors text-center"
+            style="background-color: #5ba4a4;"
+            onmouseover="this.style.backgroundColor='#4a8a8a'"
+            onmouseout="this.style.backgroundColor='#5ba4a4'"
+          >
+            צרו קשר
+          </a>
+          <a
+            href={isMemorial ? '/art/memorial' : '/art/gallery'}
+            class="inline-block border border-gray-300 text-gray-600 hover:border-[#5ba4a4] hover:text-[#5ba4a4] font-medium px-6 py-2.5 rounded-full text-sm transition-colors text-center"
+          >
+            חזרה לגלריה
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ניווט בין יצירות -->
+    {(prev || next) && (
+      <div class="mt-14 pt-8 border-t border-gray-100 flex justify-between items-center">
+        {prev ? (
+          <a href={`/art/drawings/${prev.slug}`} class="flex items-center gap-2 text-sm text-gray-500 hover:text-[#5ba4a4] transition-colors">
+            <span>→</span>
+            <div>
+              <p class="text-xs text-gray-400">הקודם</p>
+              <p class="font-medium">{prev.title}</p>
+            </div>
+          </a>
+        ) : <div />}
+        {next ? (
+          <a href={`/art/drawings/${next.slug}`} class="flex items-center gap-2 text-sm text-gray-500 hover:text-[#5ba4a4] transition-colors text-left">
+            <div>
+              <p class="text-xs text-gray-400">הבא</p>
+              <p class="font-medium">{next.title}</p>
+            </div>
+            <span>←</span>
+          </a>
+        ) : <div />}
+      </div>
+    )}
+
+  </section>
+
+</BaseLayout>

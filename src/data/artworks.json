@@ -1,0 +1,497 @@
+[
+  {
+    "slug": "שלווה-הודית",
+    "title": "שלווה הודית",
+    "description": "הודו תמיד הייתה מקום עמוס בעומק ומשמעות. הציור הזה נוצר מתוך מקום של שקט",
+    "size": "מטר על מטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_80d7215229d54c43875fe739c47cb425~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "פסיכודלי",
+    "title": "פסיכודלי",
+    "description": "קשרים במח",
+    "size": "40 על 40 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_91ff5f734e0f41caaeac39b9c622d364~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "אמא-אדמה",
+    "title": "אמא אדמה",
+    "description": "האנרגיה הנקבית מהווה את כל העולם כולו , כל החוויות , כל הרגשות וכל הצבעים",
+    "size": "מטר על מטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_7ddce7a3ed754813b7e291f5d0946aa1~mv2.jpeg",
+    "category": "gallery"
+  },
+  {
+    "slug": "בייבי-בודהה",
+    "title": "בייבי בודהה",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_fb40f03ca60c4586b78a94b44dc9d529~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "פסים-פראיים",
+    "title": "פסים פראיים",
+    "description": "",
+    "size": "30 על 21 סנטימטר",
+    "medium": "עפרונות שמן על נייר קנסון",
+    "imageId": "91da43_1866c85c37f34cd888885e3ea3c909f3~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "סיפור-יפני",
+    "title": "סיפור יפני",
+    "description": "",
+    "size": "80 על 120",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_5c1e8d00a5924366a5e2644c472d5d24~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "סיבוב-חופשי",
+    "title": "סיבוב חופשי",
+    "description": "ערפול דינמי של צבעים",
+    "size": "80 על 60 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_d93a08c6698b4c06ae08b14ce128a79b~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "שקטה",
+    "title": "שקטה",
+    "description": "ציור זה הוצג כחלק מתערוכת בגלריית WE ART בכרמיאל",
+    "size": "80 על 120",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_98af8ebe73434729be0af6f315f7f439~mv2.png",
+    "category": "gallery"
+  },
+  {
+    "slug": "בוב",
+    "title": "בוב",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "עפרונות גרפיט ופסטל על גבי נייר",
+    "imageId": "91da43_4d09ddfeb6e34a5693671dfb5de49808~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "ספיידי-2",
+    "title": "ספיידי 2",
+    "description": "",
+    "size": "21 על 30 סנטימטר",
+    "medium": "אקריליק על נייר",
+    "imageId": "91da43_bd967c9ffa844800b814875ac13d3464~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "ספיידי-1",
+    "title": "ספיידי 1",
+    "description": "אין דבר משמח יותר מאשר לצייר לנדב",
+    "size": "21 על 30 סנטימטר",
+    "medium": "אקריליק על נייר",
+    "imageId": "91da43_75f5c2b671724217bd4250b0828df674~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "אדיר",
+    "title": "אדיר",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_bfa0b74c74b5432f90ce83b85fe5890c~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "חזרה-מהאוזורה",
+    "title": "חזרה מהאוזורה",
+    "description": "שפיות זה דבר יחסי",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות שמן על נייר קנסון",
+    "imageId": "91da43_e954714d09384b4481291eabb64b26a3~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "שקיעת-פרא",
+    "title": "שקיעת פרא",
+    "description": "",
+    "size": "21 על 30 סנטימטר",
+    "medium": "אקריליק (איירבראש) על נייר",
+    "imageId": "91da43_8982132a32684b838c893208032913fe~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "משתקף",
+    "title": "משתקף",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "אקריליק על נייר",
+    "imageId": "91da43_80a36ef7283b4a2fbf0a83dcdb6b4315~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "דייג-בערפל",
+    "title": "דייג בערפל",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "אקריליק על נייר",
+    "imageId": "91da43_bc5aca7b479c47b9970a77742c95c50a~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "ציור-בציור-בציור",
+    "title": "ציור בציור בציור",
+    "description": "מחשבות על יצירה",
+    "size": "40 על 40 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_673fff242785429a812d966c805afcd4~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "צלילה",
+    "title": "צלילה",
+    "description": "",
+    "size": "40 על 40 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_cf457ce8028047a3ae63af8d18dc76c9~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "דיקומפוז",
+    "title": "דיקומפוז",
+    "description": "",
+    "size": "40 על 40 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_6c4fd50da2564eb4989a1b6253bb0380~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "פנטזיית-ים",
+    "title": "פנטזיית ים",
+    "description": "",
+    "size": "60 על 90 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_4567613740c34aa9b942a60f3ed8c6eb~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "love-is-love",
+    "title": "LOVE IS LOVE",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_c6a9a69f84aa492984157dd6aedaea63~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "100-ימים",
+    "title": "מאה ימים",
+    "description": "החזרה לבית",
+    "size": "60 על 90 סנטימטר",
+    "medium": "שמן על קנבס",
+    "imageId": "91da43_40c7c16f678342eb955a44e351169d9b~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "עוצמה",
+    "title": "עוצמה",
+    "description": "",
+    "size": "80 על 120",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_dd844380998c451db4dd4244009a5a2c~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "נירוונה",
+    "title": "נירוונה",
+    "description": "",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות גרפיט על ניר קנסון",
+    "imageId": "91da43_b35b192b514d480f90c97ce5d5d94677~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "לוחמת",
+    "title": "לוחמת",
+    "description": "",
+    "size": "90 על 110 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_3e827677554844c296e28647e5c81982~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "גיל-הזהב",
+    "title": "גיל הזהב",
+    "description": "המטרה בציור הזה הייתה להביא מישהי שגיל עבורה זה רק מספר",
+    "size": "80 על 120",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_72f9e8bb2e1c4c0ebdbbde1c37189813~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "פילפילונת",
+    "title": "פילפילונת",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "עפרונות גרפיט על ניר קנסון",
+    "imageId": "91da43_e81f2037769b419e95c4976b29a8c27b~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "חוויה-יפנית",
+    "title": "חוויה יפנית",
+    "description": "",
+    "size": "45 על 65 סנטימטר",
+    "medium": "אקריליק על קנבס",
+    "imageId": "91da43_70b4f2ec461245608f5de7bd3a9cfc99~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "סע-לאט",
+    "title": "סע לאט",
+    "description": "נוסעים במכונית הישנה לתוך הלילה.... הציור הופיע בתערוכת תתארו לכם עולם בגלריית WEART",
+    "size": "30 על 21 סנטימטר",
+    "medium": "צבעי מים ודיו",
+    "imageId": "91da43_d7ad1865ae314292bfcd2feff363b232~mv2.jpeg",
+    "category": "gallery"
+  },
+  {
+    "slug": "לב-שבור",
+    "title": "לב שבור",
+    "description": "לזכרו של תומר רפאל יקירנו",
+    "size": "30 על 21 סנטימטר",
+    "medium": "צבעי מים ודיו",
+    "imageId": "91da43_3c199f2d99c54b23baa38c5ceec7b2ea~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "ריקשה",
+    "title": "ריקשה",
+    "description": "געגועים להודו",
+    "size": "30 על 21 סנטימטר",
+    "medium": "צבעי מים ודיו",
+    "imageId": "91da43_1a695076ea9f44e2a7ff90f94201eb2f~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "מדיטציה-על-החוף",
+    "title": "מדיטציה על החוף",
+    "description": "המממממממ...",
+    "size": "30 על 21 סנטימטר",
+    "medium": "צבעי מים ודיו",
+    "imageId": "91da43_41bc0c8b467f456cb2e851d3151dc914~mv2.jpg",
+    "category": "gallery"
+  },
+  {
+    "slug": "דור-שלא-יחזור---צביקה",
+    "title": "דור שלא יחזור - צביקה",
+    "description": "סדרת דור שלא יחזור , היא אוסף של פורטרטים שנוצרו לכבד את זכרם של אהובים שאינם איתנו עוד.",
+    "size": "297 על 420 סנטימטר",
+    "medium": "עפרונות גרפיט על ניר קנסון",
+    "imageId": "91da43_1e46f04649884d28af28ddb18358acc4~mv2.png",
+    "category": "memorial"
+  },
+  {
+    "slug": "תומר-רפאל",
+    "title": "תומר רפאל",
+    "description": "",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות גרפיט על ניר קנסון",
+    "imageId": "91da43_98af8ebe73434729be0af6f315f7f439~mv2.png",
+    "category": "memorial"
+  },
+  {
+    "slug": "דור-שלא-יחזור---דודה-שרה",
+    "title": "דור שלא יחזור - דודה שרה",
+    "description": "סדרת דור שלא יחזור , היא אוסף של פורטרטים שנוצרו לכבד את זכרם של אהובים שאינם איתנו עוד.",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות גרפיט על ניר קנסון",
+    "imageId": "91da43_1e33ed8fa8f14a06b3fb439be6a4512a~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "דור-שלא-יחזור---אבא",
+    "title": "דור שלא יחזור - אבא",
+    "description": "סדרת דור שלא יחזור , היא אוסף של פורטרטים שנוצרו לכבד את זכרם של אהובים שאינם איתנו עוד.",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות גרפיט על ניר קנסון",
+    "imageId": "91da43_7d638c5b9e26442aa5856ddd27467b67~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "עומר-אשד",
+    "title": "עומר אשד",
+    "description": "עומר אשד, בן של טלי ואיצ'קו. עומר היה איתי במחלקה בצבא, הוא נפל בלבנון ב 1998. הציור מחייב אותך להתעמק בפרטים, להסתכל, כשציירתי אותו ראיתי שעומר עוד צעיר ויפה. קשה לתפוס שאנחנו בני אותו גיל, אבל לא באמת.",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_00fcc570a9204d4bb84080e169ba1363~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---תומר-גרינברג",
+    "title": "חרבות ברזל - תומר גרינברג",
+    "description": "תומר גרינברג, בן 35, קיבוץ אלמוג, מגד גולני 13",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_7b019d43c9f046518f94f300d0d6de6e~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---בן-זוסמן",
+    "title": "חרבות ברזל - בן זוסמן",
+    "description": "בן זוסמן, בן 22 מירושלים",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_ca37b6336cc04324a5c3aadd05107181~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---עלמנו-עמנואל-פלקה",
+    "title": "חרבות ברזל - עלמנו עמנואל פלקה",
+    "description": "עלמנו עמנואל פלקה, בן 22 מקריית גת",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_b53421664b584f008ca9457b9b49ff91~mv2.jpeg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---מיכאל-גל",
+    "title": "חרבות ברזל - מיכאל גל",
+    "description": "מיכאל גל , בן 29 מירושלים",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות גרפיט על נייר בריסטול",
+    "imageId": "91da43_ce98465a76c44716a4f88a0bf5e69a50~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "ניסים-מעין-לוי",
+    "title": "ניסים מעין לוי",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "עפרונות על נייר",
+    "imageId": "91da43_141c89a1b81247c89746cce78ecdf9f8~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "מרסדס-אוריה-עמר",
+    "title": "מרסדס אוריה עמר",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "עפרונות על נייר",
+    "imageId": "91da43_cb1cd7dc25254418bd4a0ad0344d6905~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---אריה-ריין",
+    "title": "חרבות ברזל - אריה ריין",
+    "description": "אריה ריין, בן 39 ממשמרות",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_af35806ee3fa4b109a50db3726c26409~mv2.jpeg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---גלי-שקותאי",
+    "title": "חרבות ברזל - גלי שקותאי",
+    "description": "עלמנו עמנואל פלקה, בן 21 מצופר",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_861ac418ac894fabb94563debc21c90f~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---עמית-בונצל",
+    "title": "חרבות ברזל - עמית בונצל",
+    "description": "עמית בונצל , בן 22 משוהם",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_66ced5a31f334068ba79e27bc8733a8a~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---עדי-שני",
+    "title": "חרבות ברזל - עדי שני",
+    "description": "עדי שני , בן 39 מצור יצחק",
+    "size": "21 על 30 סנטימטר",
+    "medium": "",
+    "imageId": "91da43_b057defda6214110ad56a74f515236a1~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---אור-יוסף-רן",
+    "title": "חרבות ברזל - אור יוסף רן",
+    "description": "אור יוסף רן, בן 29 מאיתמר",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_901be1f5d9c9477f9d39c6ee0b8a8e3b~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---עדי-דנן",
+    "title": "חרבות ברזל - עדי דנן",
+    "description": "עדי דנן , בן 20 מיבנה",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_404042c50ae64903b5af1288769c18a1~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---חיים-סבח",
+    "title": "חרבות ברזל - חיים סבח",
+    "description": "",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות על נייר בריסטול",
+    "imageId": "91da43_21ebaf3a28c24325a9b6280e2ccc738d~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---אלירז-גבאי",
+    "title": "חרבות ברזל - אלירז גבאי",
+    "description": "אלירז גבאי, בן 37 מפתח תקווה",
+    "size": "",
+    "medium": "עפרונות גרפיט על נייר בריסטול",
+    "imageId": "91da43_07fcf016204147f9ac59a61f2c968b6c~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "סהר-מידיאני",
+    "title": "סהר מידיאני",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "עפרונות על נייר",
+    "imageId": "91da43_d8ffe413a6274c9c8fdcd446c90bf900~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "חרבות-ברזל---הלל-סולומון",
+    "title": "חרבות ברזל - הלל סולומון",
+    "description": "",
+    "size": "21 על 30 סנטימטר",
+    "medium": "עפרונות גרפיט על ניר קנסון",
+    "imageId": "91da43_690955529350427a8951c3c19ee5ee1a~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "נאגי-עבדוש",
+    "title": "נאגי עבדוש",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "עפרונות על נייר",
+    "imageId": "91da43_ea0024eed05447338c8e2609705bea0c~mv2.jpg",
+    "category": "memorial"
+  },
+  {
+    "slug": "גל-עבדוש",
+    "title": "גל עבדוש",
+    "description": "",
+    "size": "297 על 420 סנטימטר",
+    "medium": "עפרונות על נייר",
+    "imageId": "91da43_c49755220e814b2482306eac808a53d9~mv2.jpg",
+    "category": "memorial"
+  }
+]
