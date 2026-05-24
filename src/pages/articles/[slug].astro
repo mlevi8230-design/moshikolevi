@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import articles from '../../data/articles.json';
+
+export function getStaticPaths() {
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const paragraphs = article.content.split('\n\n').filter(p => p.trim());
+
+const idx = articles.findIndex(a => a.slug === article.slug);
+const prev = articles[idx - 1] || null;
+const next = articles[idx + 1] || null;
+---
+
+<BaseLayout title={article.title} description={article.description}>
+
+  <section class="max-w-2xl mx-auto px-6 pt-10 pb-16">
+
+    <a href="/articles" class="text-sm text-[#5ba4a4] hover:underline flex items-center gap-1 mb-10">
+      → כל המאמרים
+    </a>
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-8 leading-snug">{article.title}</h1>
+
+    <div class="prose prose-gray max-w-none text-gray-700 leading-relaxed space-y-5 text-[1.05rem]">
+      {paragraphs.map(p => (
+        <p>{p}</p>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-14 pt-8 border-t border-gray-100 text-center">
+      <p class="text-gray-500 text-sm mb-4">רוצים לדעת עוד או להתחיל תהליך?</p>
+      <a
+        href="/contact"
+        class="inline-block text-white font-medium px-8 py-3 rounded-full text-sm transition-colors"
+        style="background-color: #5ba4a4;"
+        onmouseover="this.style.backgroundColor='#4a8a8a'"
+        onmouseout="this.style.backgroundColor='#5ba4a4'"
+      >
+        צרו קשר
+      </a>
+    </div>
+
+    <!-- ניווט בין מאמרים -->
+    {(prev || next) && (
+      <div class="mt-10 pt-6 border-t border-gray-100 flex justify-between items-start gap-4">
+        {prev ? (
+          <a href={`/articles/${prev.slug}`} class="flex items-center gap-2 text-sm text-gray-500 hover:text-[#5ba4a4] transition-colors max-w-[45%]">
+            <span class="shrink-0">→</span>
+            <div>
+              <p class="text-xs text-gray-400 mb-0.5">הקודם</p>
+              <p class="font-medium leading-snug">{prev.title}</p>
+            </div>
+          </a>
+        ) : <div />}
+        {next ? (
+          <a href={`/articles/${next.slug}`} class="flex items-center gap-2 text-sm text-gray-500 hover:text-[#5ba4a4] transition-colors text-left max-w-[45%]">
+            <div>
+              <p class="text-xs text-gray-400 mb-0.5">הבא</p>
+              <p class="font-medium leading-snug">{next.title}</p>
+            </div>
+            <span class="shrink-0">←</span>
+          </a>
+        ) : <div />}
+      </div>
+    )}
+
+  </section>
+
+</BaseLayout>
