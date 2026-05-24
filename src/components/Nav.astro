@@ -16,7 +16,7 @@ const artLinks = [
   { href: '/art/portrait', label: 'ציור על פי תמונה' },
 ];
 
-const isArtPage = ['/art'].some(p => currentPath.startsWith(p));
+const isArtPage = currentPath === '/art' || currentPath.startsWith('/art/');
 const isMeditationPage = currentPath.startsWith('/meditation');
 const activeLinks = isArtPage ? artLinks : therapyLinks;
 const homeHref = isArtPage ? '/art' : isMeditationPage ? '/meditation' : '/';
