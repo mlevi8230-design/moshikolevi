@@ -13,7 +13,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 class="text-xl font-bold text-gray-800 mb-1">CBT — Cognitive Behavior Therapy</h2>
       <p class="text-sm text-gray-400 mb-3">טיפול קוגנטיבי-התנהגותי</p>
       <p class="text-gray-600 leading-relaxed">
-        טיפול קוגנטיבי-התנהגותי הוא גישה מובנית, ממוקדת מטרה ומבוססת ראיות. הוא מתמקד בזיהוי דפוסי חשיבה והתנהגות שגורמים לנו לסבל, ובמתן כלים לשנות אותם.
+        טיפול קוגניטיבי התנהגותי קצר מועד, ממוקד מטרה, המסייע בזיהוי דפוסי חשיבה והתנהגות בעייתיים ומתן כלים מעשיים לשינוי.
       </p>
     </div>
 
@@ -24,7 +24,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 class="text-xl font-bold text-gray-800 mb-1">LI — Low Intensity</h2>
       <p class="text-sm text-gray-400 mb-3">טיפול בעצימות נמוכה</p>
       <p class="text-gray-600 leading-relaxed">
-        טיפול בעצימות נמוכה, המאפשר מענה קצר וממוקד לצרכים של המטופל. יעיל במיוחד עבור חרדה, דכדוך ולחץ יומיומי.
+        טיפול בעצימות נמוכה, המתמקד בטיפולים קצרי מועד בטווח מוגדר של נושאים.
       </p>
     </div>
 
@@ -33,35 +33,58 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <!-- ACT -->
     <div class="mb-12">
       <h2 class="text-xl font-bold text-gray-800 mb-1">ACT — Acceptance and Commitment Therapy</h2>
-      <p class="text-sm text-gray-400 mb-3">טיפול בקבלה ומחויבות</p>
+      <p class="text-sm text-gray-400 mb-3">תרפית קבלה ומחויבות</p>
       <p class="text-gray-600 leading-relaxed mb-4">
-        גישה טיפולית המתמקדת בקבלה של מחשבות ורגשות — גם כאלה שמסבים לנו כאב — ובמחויבות לפעול בהתאם לערכים שלנו.
+        ACT היא גישה טיפולית המיועדת לסייע לאנשים לפתח גמישות נפשית – היכולת להיות פתוחים, גמישים ומחוברים למה שחשוב לכם באמת, גם כאשר יש קושי רגשי או מחשבות מטרידות.
       </p>
       <p class="text-gray-600 leading-relaxed">
-        ACT לא שואל "איך לא לחשוב את המחשבה הזו" אלא "איך אוכל לחיות חיים מלאים ומשמעותיים גם כשהמחשבה הזו נוכחת".
+        הטיפול מתמקד בקבלה של רגשות ומחשבות במקום להימנע מהם, ובמחויבות לפעול בדרך שתואמת את הערכים והשאיפות האישיות שלכם.
+      </p>
+    </div>
+
+    <hr class="border-gray-100 mb-8" />
+
+    <!-- הגישה הטיפולית שלי -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">הגישה הטיפולית שלי</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        אני מאמין שטיפול לא חייב להתקיים רק בין ארבעה קירות – אלא יכול (ואולי צריך) לשלב גם שמחה, יצירה וחוויות חיים שלעתים נדחקות לשוליים ביומיום שלנו. לצד תהליך מובנה וממוקד שבו נגדיר יחד את נקודת המוצא, המטרות והמחסומים, נפתח גם מרחב לחיבור לעולם הרוח, לדמיון ולחלקים שבנו שמבקשים פשוט להיות.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        הגעתי לעולם הטיפול אחרי שנים בהיי־טק, ומתוך ניסיון חיים שהראה לי עד כמה מתודולוגיות ברורות יכולות להעמיק ולהתרחב כשהן פוגשות מרחב גמיש, אנושי ומכיל. היום אני מחבר בין שני העולמות – בין בהירות ודיוק לבין יצירתיות, קשר אישי וחוויה.
       </p>
     </div>
 
     <!-- לאיזה מצבים מתאים -->
-    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">לאיזה מצבים מתאים התהליך?</h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-12">
-      {['חרדה', 'דכדוך', 'לחץ', 'קשי התמודדות', 'תקיעות', 'מחשבות טורדניות'].map(item => (
-        <div class="border border-gray-200 rounded-lg p-4 text-center">
-          <p class="text-gray-700">{item}</p>
-        </div>
-      ))}
+    <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">לאיזה מצבים התהליך מתאים?</h2>
+    <p class="text-gray-600 leading-relaxed text-center mb-6">
+      חרדות, דכדוך, לחץ מתמשך או קושי בוויסות רגשי, בלבול, תקיעות, קושי בקבלת החלטות, כעס, מחשבות טורדניות.
+    </p>
+    <p class="text-gray-500 text-center text-sm mb-12">
+      הטיפול מהווה גם מרחב בטוח להתפתחות אישית וצמיחה עמוקה.
+    </p>
+
+    <!-- חשוב לדעת -->
+    <div class="border border-amber-200 bg-amber-50 rounded-lg p-5 mb-12 text-sm text-amber-800">
+      <p class="font-semibold mb-2">חשוב לדעת!</p>
+      <ul class="space-y-1">
+        <li>• אני איני פסיכולוג או פסיכו תרפיסט ואינני מוסמך לבצע אבחונים קליניים</li>
+        <li>• הטיפול הוא בבגירים בלבד</li>
+        <li>• אני אינני עוסק בדיכאון מג'ורי, הפרעת דחק פוסט טראומתית, הפרעת כפיתיות OCD, הפרעות אישיות גבולית</li>
+        <li>• הטיפול אינו מהווה תחליף להמלצות רפואיות</li>
+      </ul>
     </div>
 
     <!-- מה אני מציע -->
-    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">מה אני מציע</h2>
-    <ul class="space-y-3 mb-12">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">מה אני מציע</h2>
+    <p class="text-gray-600 text-center mb-5">טיפול LI-CBT מקצועי וממוקד, הכולל:</p>
+    <ul class="space-y-3 mb-8">
       {[
-        'טיפול LI-CBT ממוקד ומובנה',
-        'תהליך מותאם אישית, בקצב שלך',
-        'כלים מעשיים לשינוי דפוסי מחשבה',
-        'חיבור לשילוב של יצירה, גמישות וחוויות',
-        'חדר בטוח, קשוב ואנושי',
-        'מפגשים פרונטאליים בגני תקווה או אונליין',
+        'תהליך מותאם אישי, בקצב ובדרך שנכונה לכם',
+        'הגדרת מטרות אישיות ומדידות + חקירה מעמיקה של דפוסים מעכבים',
+        'חיבור לעולמות של יצירה, עניין אישי, גמישות מחשבתית ותחושת מסוגלות',
+        'מרחב בטוח, מקצועי ואנושי',
+        'מפגשים פרונטליים בגני תקווה או באונליין',
       ].map(item => (
         <li class="flex items-start gap-3">
           <span class="text-[#5ba4a4] font-bold mt-0.5">✓</span>
@@ -70,25 +93,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       ))}
     </ul>
 
-    <!-- חשוב לדעת -->
-    <div class="border border-amber-200 bg-amber-50 rounded-lg p-5 mb-12 text-sm text-amber-800">
-      <p class="font-semibold mb-2">חשוב לדעת</p>
-      <ul class="space-y-1">
-        <li>• אני איני פסיכולוג ואינני מוסמך לבצע אבחונים קליניים</li>
-        <li>• הטיפול אינו מהווה תחליף להמלצות רפואיות</li>
-        <li>• אני איני עוסק בטיפול במקרים פסיכיאטריים, הפרעות סכיזופרניה, OCD חמור ואנשים לאחר אשפוז</li>
-      </ul>
+    <!-- תמונת קליניקה -->
+    <div class="flex justify-center mb-10">
+      <img
+        src="/images/home/clinic.png"
+        alt="קליניקה של מושיקו לוי"
+        class="rounded-lg max-w-full w-full md:w-2/3 object-cover shadow-sm"
+        loading="lazy"
+      />
     </div>
 
-    <div class="text-center">
+    <p class="text-center text-gray-500 mb-8">צרו קשר לשיחת ייעוץ בחינם</p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
       <a
         href="/contact"
-        class="inline-block text-white font-medium px-8 py-3 rounded-full transition-colors"
+        class="inline-block text-white font-medium px-8 py-3 rounded-full transition-colors text-center"
         style="background-color: #5ba4a4;"
         onmouseover="this.style.backgroundColor='#4a8a8a'"
         onmouseout="this.style.backgroundColor='#5ba4a4'"
       >
-        לתיאום פגישה ראשונה
+        צור קשר
+      </a>
+      <a
+        href="/articles"
+        class="inline-block border text-sm font-medium px-8 py-3 rounded-full transition-colors text-gray-600 hover:text-[#5ba4a4] border-gray-300 hover:border-[#5ba4a4] text-center"
+      >
+        מאמרים
       </a>
     </div>
   </section>
