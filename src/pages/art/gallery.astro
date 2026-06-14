@@ -11,7 +11,7 @@ const galleryArts = artworks.filter(a => a.category === 'gallery');
     <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">גלריה</h1>
     <p class="text-center text-gray-400 text-sm mb-10">אקריליק, עפרונות, צבעי מים — {galleryArts.length} עבודות</p>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
       {galleryArts.map(art => (
         <a
           href={`/art/drawings/${art.slug}`}
@@ -25,9 +25,9 @@ const galleryArts = artworks.filter(a => a.category === 'gallery');
               loading="lazy"
             />
           </div>
-          <div class="p-2.5">
-            <p class="text-sm font-medium text-gray-700 truncate">{art.title}</p>
-            {art.medium && <p class="text-xs text-gray-400 truncate mt-0.5">{art.medium}</p>}
+          <div class="p-3">
+            <p class="text-sm font-medium text-gray-700 leading-tight line-clamp-1">{art.title}</p>
+            {art.medium && <p class="text-xs text-gray-400 mt-0.5 line-clamp-1">{art.medium}</p>}
           </div>
         </a>
       ))}

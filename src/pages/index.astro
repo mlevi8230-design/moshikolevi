@@ -4,23 +4,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="דף הבית" description="מושיקו לוי — מטפל קוגנטיבי-חוויתי LI-CBT בגישת ACT. קליניקה בגני תקווה ואונליין.">
 
-  <!-- Hero text -->
-  <section class="max-w-3xl mx-auto px-6 pt-16 pb-8 text-center">
-    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-snug">
-      מושיקו לוי — טיפול קוגנטיבי חוויתי
-    </h1>
-    <a
-      href="/contact"
-      class="inline-block text-white font-medium px-8 py-3 rounded-full text-base transition-colors"
-      style="background-color: #5ba4a4;"
-      onmouseover="this.style.backgroundColor='#4a8a8a'"
-      onmouseout="this.style.backgroundColor='#5ba4a4'"
-    >
-      ליצירת קשר
-    </a>
+  <!-- Hero — תמונה מלאת-רוחב עם טקסט מעל -->
+  <section class="relative w-full overflow-hidden" style="height: clamp(280px, 70vw, 520px);">
+    <img
+      src="/images/home/clinic.png"
+      alt="קליניקה של מושיקו לוי"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+      <h1 class="text-2xl md:text-4xl font-bold text-white mb-3 leading-snug drop-shadow">
+        מושיקו לוי — טיפול קוגנטיבי חוויתי
+      </h1>
+      <p class="text-sm md:text-base mb-6 drop-shadow" style="color: rgba(255,255,255,0.85);">
+        קליניקה בגני תקווה · מפגשים אונליין
+      </p>
+      <a
+        href="/contact"
+        class="inline-block text-white font-medium px-8 py-3 rounded-full text-base transition-colors shadow-md"
+        style="background-color: #5ba4a4;"
+        onmouseover="this.style.backgroundColor='#4a8a8a'"
+        onmouseout="this.style.backgroundColor='#5ba4a4'"
+      >
+        ליצירת קשר
+      </a>
+    </div>
   </section>
 
-  <!-- תוכן ראשי + תמונה -->
+  <!-- תוכן ראשי -->
   <section class="max-w-3xl mx-auto px-6 py-10">
     <p class="text-sm text-gray-400 mb-3">נעים מאוד</p>
 
@@ -44,36 +55,80 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="text-gray-700 leading-relaxed mb-10">
       אם זה מדבר אליך — או אפילו רק מסקרן אותך — אשמח להיפגש.
     </p>
-
-    <!-- תמונת הקליניקה -->
-    <div class="flex justify-center my-6">
-      <img
-        src="/images/home/clinic.png"
-        alt="קליניקה של מושיקו לוי"
-        class="rounded-lg max-w-full w-full md:w-2/3 object-cover shadow-sm"
-        loading="lazy"
-      />
-    </div>
   </section>
 
-  <!-- המלצות -->
+  <!-- המלצות — קרוסלה -->
   <section class="max-w-3xl mx-auto px-6 py-10">
-    <div class="space-y-6">
-      <blockquote class="border border-gray-100 rounded-xl p-6 text-gray-600 leading-relaxed text-base italic">
-        "הגעתי למושיקו עם צורך למצוא את הדפוסים המגבילים שלי ולקבל כלים לשנות אותם ולהתמודד איתם.
-        מושיקו עזר לי לראות את הדברים בצורה ברורה ולימד אותי כלים מעשיים בהם אני משתמשת גם היום ועוזרים לי מאוד!
-        בשונה מכל טיפול אחר שחוויתי, פה עסקנו בדברים ברגע האמת ולראשונה הצטיידתי בכלים פרקטיים.
-        אני מודה על התהליך המדוייק שעשינו ביחד. תודה מעומק הלב!"
-      </blockquote>
-      <blockquote class="border border-gray-100 rounded-xl p-6 text-gray-600 leading-relaxed text-base italic">
-        "הגעתי לתהליך כשאני ואמונה בעצמי כשני זרים. כבר שכחתי מהי הצלחה, איך היא נראית ואיך היא מרגישה.
-        בתהליך איתך הצלחתי לאט לאט לראות את עצמי במשקפיים של האחר, לראות אותי מבחוץ, כלומר לראות בעצמי את מה שאחרים רואים בי,
-        ועל ידי כך חזרתי להכיר בערך עצמי ולגלות חמלה ואמפתיה כלפיי. כך שהאמון והבטחון פרצו ואיתם ההצלחות...
-        התהליך מומלץ בחום לכל אחד ואחת ולא רק לשבורי לב :)
-        תחושת החברות, האמפתיה והחיוך של מושיקו, הפשטות בה הדברים נאמרים ונעשים ותחושת העצמה שמושיקו מעצים בחיוך, בענווה, עם הומור ולב — הם אלו שעושים את התהליך עם מושיקו לשונה, מיוחד ומעצים."
-      </blockquote>
+    <h2 class="text-lg font-semibold text-gray-500 mb-6 text-center tracking-wide">מה אומרים המטופלים</h2>
+
+    <div class="relative" id="testimonials-carousel">
+      <!-- מסגרת overflow -->
+      <div class="overflow-hidden">
+        <div id="testimonials-track" class="flex transition-transform duration-500 ease-in-out" style="will-change: transform;">
+
+          <blockquote class="min-w-full border border-gray-100 rounded-xl p-6 text-gray-600 leading-relaxed text-base italic">
+            "הגעתי למושיקו עם צורך למצוא את הדפוסים המגבילים שלי ולקבל כלים לשנות אותם ולהתמודד איתם.
+            מושיקו עזר לי לראות את הדברים בצורה ברורה ולימד אותי כלים מעשיים בהם אני משתמשת גם היום ועוזרים לי מאוד!
+            בשונה מכל טיפול אחר שחוויתי, פה עסקנו בדברים ברגע האמת ולראשונה הצטיידתי בכלים פרקטיים.
+            אני מודה על התהליך המדוייק שעשינו ביחד. תודה מעומק הלב!"
+          </blockquote>
+
+          <blockquote class="min-w-full border border-gray-100 rounded-xl p-6 text-gray-600 leading-relaxed text-base italic">
+            "הגעתי לתהליך כשאני ואמונה בעצמי כשני זרים. כבר שכחתי מהי הצלחה, איך היא נראית ואיך היא מרגישה.
+            בתהליך איתך הצלחתי לאט לאט לראות את עצמי במשקפיים של האחר, לראות אותי מבחוץ, כלומר לראות בעצמי את מה שאחרים רואים בי,
+            ועל ידי כך חזרתי להכיר בערך עצמי ולגלות חמלה ואמפתיה כלפיי. כך שהאמון והבטחון פרצו ואיתם ההצלחות...
+            התהליך מומלץ בחום לכל אחד ואחת ולא רק לשבורי לב :)
+            תחושת החברות, האמפתיה והחיוך של מושיקו, הפשטות בה הדברים נאמרים ונעשים ותחושת העצמה שמושיקו מעצים בחיוך, בענווה, עם הומור ולב — הם אלו שעושים את התהליך עם מושיקו לשונה, מיוחד ומעצים."
+          </blockquote>
+
+        </div>
+      </div>
+
+      <!-- חצים -->
+      <button id="prev-btn" aria-label="המלצה קודמת"
+        class="absolute top-1/2 -translate-y-1/2 -end-3 w-9 h-9 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 hover:text-[#5ba4a4] hover:border-[#5ba4a4] transition-colors">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <button id="next-btn" aria-label="המלצה הבאה"
+        class="absolute top-1/2 -translate-y-1/2 -start-3 w-9 h-9 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 hover:text-[#5ba4a4] hover:border-[#5ba4a4] transition-colors">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+    </div>
+
+    <!-- נקודות ניווט -->
+    <div class="flex justify-center gap-2 mt-5" id="testimonials-dots">
+      <button class="w-2 h-2 rounded-full bg-[#5ba4a4] transition-all" data-index="0" aria-label="המלצה 1"></button>
+      <button class="w-2 h-2 rounded-full bg-gray-300 transition-all" data-index="1" aria-label="המלצה 2"></button>
     </div>
   </section>
+
+  <script>
+    const track = document.getElementById('testimonials-track');
+    const dots = document.querySelectorAll('#testimonials-dots button');
+    const total = dots.length;
+    let current = 0;
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(${current * 100}%)`;
+      dots.forEach((d, i) => {
+        d.classList.toggle('bg-[#5ba4a4]', i === current);
+        d.classList.toggle('bg-gray-300', i !== current);
+      });
+    }
+
+    document.getElementById('prev-btn').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('next-btn').addEventListener('click', () => goTo(current + 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.index)));
+
+    // swipe למובייל
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    });
+  </script>
 
   <!-- CTA תחתון -->
   <section class="max-w-3xl mx-auto px-6 py-12 text-center">
