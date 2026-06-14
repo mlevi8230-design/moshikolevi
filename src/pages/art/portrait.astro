@@ -2,63 +2,98 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="ציור על פי תמונה" description="הזמנת ציור אישי — פורטרייט, ציורי הנצחה, ציורים מתמונה">
+<BaseLayout title="ציור על פי תמונה" description="שירות ציור על פי תמונה — פורטרייטים, ציורי הנצחה, מתנות מיוחדות">
 
   <section class="max-w-3xl mx-auto px-6 pt-14 pb-16">
-    <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">ציור על פי תמונה</h1>
-    <p class="text-center text-gray-400 text-sm mb-12">הזמנת ציור אישי — פורטרייטים, ציורי הנצחה</p>
+    <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">שירות ציור על פי תמונה</h1>
 
-    <!-- דוגמאות -->
-    <div class="grid grid-cols-2 gap-4 mb-12">
-      <div class="overflow-hidden rounded-lg aspect-square bg-gray-50">
+    <!-- טקסט ראשי -->
+    <p class="text-gray-600 leading-relaxed mb-10 text-base">
+      שירות הציור על פי תמונה מאפשר לך להנציח רגעים יקרים בצורה ייחודית ואמנותית. אני מתמחה בציור דיוקנאות מרהיבים מתוך תמונות שלך—בין אם מדובר באדם יחיד, זוג, משפחה שלמה, או אפילו חיית מחמד אהובה. כל יצירה מותאמת אישית, מצוירת בקפידה ובאהבה לפרטים הקטנים ביותר, כדי לשקף את האופי הייחודי והחיבור הרגשי שבתמונה. אתם שולחים לנו את התמונה, ואנו יוצרים עבורה יצירת אמנות שתשמור על הזיכרונות היקרים לכם לנצח.
+    </p>
+
+    <!-- לפני ואחרי — ילדה -->
+    <div class="grid grid-cols-2 gap-4 mb-8">
+      <div class="overflow-hidden rounded-lg bg-gray-50">
         <img
-          src="/images/for-sale/custom-portrait-1.jpg"
-          alt="דוגמה לציור על פי תמונה"
+          src="/images/portrait/girl-photo.jpg"
+          alt="תמונה מקורית — ילדה עם כובע"
           class="w-full h-full object-cover"
           loading="lazy"
         />
       </div>
-      <div class="overflow-hidden rounded-lg aspect-square bg-gray-50">
+      <div class="overflow-hidden rounded-lg bg-gray-50">
         <img
-          src="/images/for-sale/custom-portrait-2.jpg"
-          alt="דוגמה לציור על פי תמונה"
+          src="/images/portrait/girl-drawing.png"
+          alt="ציור עפרון — ילדה עם כובע"
           class="w-full h-full object-cover"
           loading="lazy"
         />
       </div>
     </div>
 
-    <!-- הסבר -->
-    <div class="space-y-5 mb-12 text-gray-600 leading-relaxed">
-      <p>
-        אני מציע ציורים אישיים על בסיס תמונה — מתאים לפורטרייטים, ציורי הנצחה, מתנות מיוחדות וכל רגע שחשוב לכם לשמר.
-      </p>
-      <p>
-        כל ציור נוצר בקפידה ובתשומת לב לפרטים, בסגנון שמתאים לאופי התמונה ולבקשה שלכם.
-      </p>
-      <p>
-        לאחר קבלת הציור תוכלו להדפיסו בכל גודל שתרצו.
-      </p>
+    <!-- טקסט משני -->
+    <p class="text-gray-500 leading-relaxed mb-8 text-sm text-center">
+      לקוחותיי משתמשים בשירות זה עבור ציורים משפחתיים, ציורי הנצחה, מתנות יום נישואין ועוד...
+    </p>
+
+    <!-- לפני ואחרי — כלב -->
+    <div class="grid grid-cols-2 gap-4 mb-10">
+      <div class="overflow-hidden rounded-lg bg-gray-50">
+        <img
+          src="/images/portrait/dog-photo.jpg"
+          alt="תמונה מקורית — כלב"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div class="overflow-hidden rounded-lg bg-gray-50">
+        <img
+          src="/images/portrait/dog-drawing.jpg"
+          alt="ציור עפרון — כלב"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
     </div>
 
-    <!-- שלבי ההזמנה -->
-    <h2 class="text-xl font-bold text-gray-800 mb-5">איך מזמינים?</h2>
-    <ol class="space-y-4 mb-12">
-      {[
-        'שלחו הודעה ב-WhatsApp עם התמונה שלכם',
-        'נדון בסגנון, הגודל והציפיות',
-        'תוך מספר ימים הציור מוכן ונשלח אליכם',
-      ].map((step, i) => (
-        <li class="flex items-start gap-3">
-          <span class="w-7 h-7 rounded-full text-white text-sm flex items-center justify-center shrink-0 font-bold" style="background-color: #5ba4a4;">
-            {i + 1}
-          </span>
-          <span class="text-gray-600 leading-relaxed pt-0.5">{step}</span>
-        </li>
-      ))}
-    </ol>
+    <!-- מחירים -->
+    <div class="bg-blue-50 rounded-xl p-6 mb-10 text-center">
+      <h2 class="font-bold text-gray-800 text-lg mb-3">מחירים</h2>
+      <p class="text-gray-600 mb-3 font-medium">עפרונות על נייר</p>
+      <div class="space-y-1.5 text-gray-600 text-sm">
+        <p>A4 דמות יחידה — 500 ₪</p>
+        <p>A3 דמות יחידה — 800 ₪</p>
+        <p>A3 שתי דמויות — 1,200 ₪</p>
+        <p>A3 משפחתי — הצעת מחיר</p>
+      </div>
+    </div>
 
+    <!-- תמונת סטודיו — ציור על כן -->
+    <div class="mb-8 rounded-xl overflow-hidden">
+      <img
+        src="/images/portrait/easel-portrait.jpg"
+        alt="ציור פורטרייט על כן"
+        class="w-full object-cover"
+        style="max-height: 420px; object-position: center;"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- תמונה נוספת -->
+    <div class="flex justify-center mb-12">
+      <img
+        src="/images/portrait/studio-portrait.jpg"
+        alt="ציור פורטרייט בסטודיו"
+        class="rounded-xl object-cover shadow-sm"
+        style="max-height: 480px; max-width: 100%;"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- CTA -->
     <div class="text-center">
+      <p class="text-gray-500 text-sm mb-4">לפרטים ומחירים — שלחו הודעה</p>
       <a
         href="https://wa.me/+972542400106"
         target="_blank"
