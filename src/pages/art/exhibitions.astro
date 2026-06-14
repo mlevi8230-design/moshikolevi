@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const artworks = [
+  // יצירות - קבוצה ראשונה
+  { src: '/images/exhibitions/התרחשות-מתמדת-2.jpg',  title: 'התרחשות מתמדת 2' },
+  { src: '/images/exhibitions/משקל-המחשבות.jpg',      title: 'משקל המחשבות' },
+  { src: '/images/exhibitions/נגן-2.jpg',              title: 'נגן #2' },
+  { src: '/images/exhibitions/בין-אחיזה-לנפילה.jpg',  title: 'בין אחיזה לנפילה' },
+  { src: '/images/exhibitions/התרחשות-מתמדת-5.jpg',  title: 'התרחשות מתמדת 5' },
+  { src: '/images/exhibitions/נגן-1.jpg',              title: 'נגן #1' },
+  { src: '/images/exhibitions/artwork-unnamed-1.jpg',  title: '' },
+  { src: '/images/exhibitions/התרחשות-מתמדת-4.jpg',  title: 'התרחשות מתמדת 4' },
+  { src: '/images/exhibitions/where-is-my-mind.jpg',  title: 'Where Is My Mind' },
+  { src: '/images/exhibitions/התבוננות.jpg',           title: 'התבוננות' },
+  { src: '/images/exhibitions/שק-הדמעות.jpg',          title: 'שק הדמעות' },
+  { src: '/images/exhibitions/צעד-אמיץ-2.jpg',         title: 'צעד אמיץ 2' },
+  { src: '/images/exhibitions/צעד-אמיץ-1.jpg',         title: 'צעד אמיץ 1' },
+  { src: '/images/exhibitions/סבין.jpg',               title: 'סבין' },
+  { src: '/images/exhibitions/פסק-זמן-2.jpg',          title: 'פסק זמן #2' },
+  { src: '/images/exhibitions/מחוך-2.jpg',             title: 'מחוך #2' },
+  { src: '/images/exhibitions/מעגלי-תודעה-2.jpg',      title: 'מעגלי תודעה #2' },
+  { src: '/images/exhibitions/התכנסות.jpg',            title: 'התכנסות' },
+  { src: '/images/exhibitions/פסק-זמן-1.jpg',          title: 'פסק זמן #1' },
+  { src: '/images/exhibitions/מחוך-1.jpg',             title: 'מחוך #1' },
+  { src: '/images/exhibitions/מעגלי-תודעה-1.jpg',      title: 'מעגלי תודעה #1' },
+  { src: '/images/exhibitions/ראש-ברזל.jpg',           title: 'ראש ברזל' },
+  { src: '/images/exhibitions/מדוזה-1.jpg',            title: 'מדוזה #1' },
+  { src: '/images/exhibitions/מחשבות-סומרות.jpg',      title: 'מחשבות סומרות' },
+  { src: '/images/exhibitions/גמישות.jpg',             title: 'גמישות' },
+  { src: '/images/exhibitions/מחוך-3.jpg',             title: 'מחוך #3' },
+  { src: '/images/exhibitions/מעגלי-תודעה-3.jpg',      title: 'מעגלי תודעה #3' },
+  { src: '/images/exhibitions/ליצן.jpg',               title: 'ליצן' },
+  // יצירות — קבוצה שניה
+  { src: '/images/exhibitions/japan.jpg',              title: 'Japan' },
+  { src: '/images/exhibitions/warrior.jpg',            title: 'Warrior' },
+  { src: '/images/exhibitions/artwork-unnamed-2.jpg',  title: '' },
+  { src: '/images/exhibitions/אהבה-יפנית.jpg',         title: 'אהבה יפנית' },
+  { src: '/images/exhibitions/lion.jpg',               title: 'Lion' },
+  { src: '/images/exhibitions/1000days.jpg',           title: '1000 Days' },
+  { src: '/images/exhibitions/artwork-unnamed-3.jpg',  title: '' },
+  { src: '/images/exhibitions/שקטה.jpg',              title: 'שקטה' },
+  { src: '/images/exhibitions/בייבי-בודהה.jpg',        title: 'בייבי בודהה' },
+  // יצירות נוספות
+  { src: '/images/exhibitions/דיקומפוז.jpg',           title: 'דיקומפוז' },
+  { src: '/images/exhibitions/סיבוב-חופשי.jpg',        title: 'סיבוב חופשי' },
+  { src: '/images/exhibitions/מיצי.jpg',              title: 'מיצי' },
+  { src: '/images/exhibitions/עצנדיב.jpg',             title: 'עצנדיב' },
+  { src: '/images/exhibitions/wimm-moshiko.jpg',       title: 'רומינציה' },
+];
+
+const galleryPhotos = [
+  '/images/exhibitions/wimm-gallery-1.jpg',
+  '/images/exhibitions/wimm-gallery-2.jpg',
+  '/images/exhibitions/wimm-gallery-3.jpg',
+  '/images/exhibitions/exhibit-photo-1.jpg',
+  '/images/exhibitions/exhibit-photo-2.jpg',
+  '/images/exhibitions/exhibit-photo-3.jpg',
+  '/images/exhibitions/exhibit-photo-4.jpg',
+  '/images/exhibitions/exhibit-photo-5.jpg',
+  '/images/exhibitions/exhibit-photo-6.jpg',
+  '/images/exhibitions/exhibit-photo-7.jpg',
+];
+---
+
+<BaseLayout title="תערוכות" description="תערוכות אמנות של מושיקו לוי — WHERE IS MY MIND ותערוכות קבוצתיות">
+
+  <section class="max-w-4xl mx-auto px-6 pt-14 pb-16">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">תערוכות</h1>
+    <p class="text-center text-gray-400 text-sm mb-12">
+      בשנים האחרונות זכיתי להציג את עבודותיי בתערוכות יחיד וקבוצתיות
+    </p>
+
+    <!-- WHERE IS MY MIND -->
+    <div class="mb-20">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="h-px flex-1 bg-gray-200"></div>
+        <h2 class="text-xl font-bold text-gray-800 shrink-0">WHERE IS MY MIND?</h2>
+        <div class="h-px flex-1 bg-gray-200"></div>
+      </div>
+
+      <p class="text-center text-gray-500 text-sm mb-1">גלריית מרכב הבמה — בית לאמנים יוצרים</p>
+      <p class="text-center text-gray-400 text-xs mb-8">תערוכת יחיד</p>
+
+      <!-- פוסטר -->
+      <div class="flex justify-center mb-8">
+        <div class="rounded-xl overflow-hidden shadow-sm" style="max-width: 340px;">
+          <img
+            src="/images/exhibitions/wimm-poster.jpg"
+            alt="פוסטר תערוכת WHERE IS MY MIND"
+            class="w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <p class="text-gray-600 leading-relaxed text-center mb-12 text-sm max-w-xl mx-auto">
+        חלון אל התודעה של ציייר ופסלת, כאשר המפגש ביניהם מציג את העיסוק האינסופי במוח האדם, המניע אותו ליצור.
+        <br />
+        <span class="text-gray-400 italic mt-1 block">SO WHERE IS YOUR MIND?</span>
+      </p>
+
+      <!-- יצירות — גריד מלא -->
+      <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">יצירות מהתערוכה</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-14">
+        {artworks.map(art => (
+          <div class="group">
+            <div class="aspect-[3/4] overflow-hidden rounded-lg bg-gray-50">
+              <img
+                src={art.src}
+                alt={art.title || 'יצירה מהתערוכה'}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            {art.title && (
+              <p class="text-xs text-gray-500 mt-1.5 text-center leading-tight">{art.title}</p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <!-- תמונות מחלל התערוכה -->
+      <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">מחלל התערוכה</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {galleryPhotos.map(src => (
+          <div class="rounded-xl overflow-hidden">
+            <img
+              src={src}
+              alt="תמונה מחלל התערוכה"
+              class="w-full object-cover"
+              style="height: 180px; object-position: center;"
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- תערוכות קבוצתיות -->
+    <div>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="h-px flex-1 bg-gray-200"></div>
+        <h2 class="text-xl font-bold text-gray-800 shrink-0">תערוכות קבוצתיות</h2>
+        <div class="h-px flex-1 bg-gray-200"></div>
+      </div>
+
+      <div class="space-y-3">
+        {[
+          {
+            name: 'עוצמת הרכות',
+            url: 'https://we-art.co.il/events/%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%aa-%d7%a2%d7%95%d7%a6%d7%9e%d7%aa-%d7%94%d7%a8%d7%9b%d7%95%d7%aa-%d7%9c%d7%a8%d7%92%d7%9c-%d7%97%d7%95%d7%93%d7%a9-%d7%94%d7%90%d7%99%d7%a9%d7%94-%d7%94%d7%91/'
+          },
+          {
+            name: 'תתארו לכם עולם',
+            url: 'https://we-art.co.il/events/%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%94-%d7%aa%d7%aa%d7%90%d7%a8%d7%95-%d7%9c%d7%9b%d7%9d-%d7%a2%d7%95%d7%9c%d7%9d-%d7%91%d7%92%d7%9c%d7%a8%d7%99%d7%99%d7%aa-weart/'
+          },
+          {
+            name: 'לשוב הבייתה',
+            url: 'https://we-art.co.il/events/%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%aa-%d7%9c%d7%a9%d7%95%d7%91-%d7%94%d7%91%d7%99%d7%99%d7%aa%d7%94-%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%94-%d7%a7%d7%91%d7%95%d7%a6%d7%aa%d7%99%d7%aa/'
+          },
+          {
+            name: 'ריקוד עוף החול',
+            url: 'https://we-art.co.il/events/%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%aa-%d7%a8%d7%99%d7%a7%d7%95%d7%93-%d7%a2%d7%95%d7%a3-%d7%94%d7%97%d7%95%d7%9c-%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%94-%d7%a7%d7%91%d7%95%d7%a6%d7%aa%d7%99%d7%aa/'
+          },
+        ].map(ex => (
+          <a
+            href={ex.url}
+            target="_blank"
+            rel="noopener"
+            class="flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-100 hover:border-[#5ba4a4] transition-colors group"
+          >
+            <span class="font-medium text-gray-700 group-hover:text-[#5ba4a4] transition-colors">{ex.name}</span>
+            <span class="text-gray-300 group-hover:text-[#5ba4a4] text-sm shrink-0 transition-colors">← לאתר we-art</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+  </section>
+
+</BaseLayout>
