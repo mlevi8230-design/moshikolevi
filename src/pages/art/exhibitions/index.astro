@@ -19,22 +19,18 @@ const group = [
   {
     name: 'עוצמת הרכות',
     url: 'https://we-art.co.il/events/%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%aa-%d7%a2%d7%95%d7%a6%d7%9e%d7%aa-%d7%94%d7%a8%d7%9b%d7%95%d7%aa-%d7%9c%d7%a8%d7%92%d7%9c-%d7%97%d7%95%d7%93%d7%a9-%d7%94%d7%90%d7%99%d7%a9%d7%94-%d7%94%d7%91/',
-    thumb: '/images/exhibitions/גמישות.jpg',
   },
   {
     name: 'תתארו לכם עולם',
     url: 'https://we-art.co.il/events/%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%94-%d7%aa%d7%aa%d7%90%d7%a8%d7%95-%d7%9c%d7%9b%d7%9d-%d7%a2%d7%95%d7%9c%d7%9d-%d7%91%d7%92%d7%9c%d7%a8%d7%99%d7%99%d7%aa-weart/',
-    thumb: '/images/exhibitions/ראש-ברזל.jpg',
   },
   {
     name: 'לשוב הבייתה',
     url: 'https://we-art.co.il/events/%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%aa-%d7%9c%d7%a9%d7%95%d7%91-%d7%94%d7%91%d7%99%d7%99%d7%aa%d7%94-%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%94-%d7%a7%d7%91%d7%95%d7%a6%d7%aa%d7%99%d7%aa/',
-    thumb: '/images/exhibitions/התכנסות.jpg',
   },
   {
     name: 'ריקוד עוף החול',
     url: 'https://we-art.co.il/events/%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%aa-%d7%a8%d7%99%d7%a7%d7%95%d7%93-%d7%a2%d7%95%d7%a3-%d7%94%d7%97%d7%95%d7%9c-%d7%aa%d7%a2%d7%a8%d7%95%d7%9b%d7%94-%d7%a7%d7%91%d7%95%d7%a6%d7%aa%d7%99%d7%aa/',
-    thumb: '/images/exhibitions/צעד-אמיץ-1.jpg',
   },
 ];
 ---
@@ -91,26 +87,16 @@ const group = [
         <div class="h-px flex-1 bg-gray-200"></div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4">
+      <div class="space-y-3">
         {group.map(ex => (
           <a
             href={ex.url}
             target="_blank"
             rel="noopener"
-            class="group border border-gray-200 rounded-2xl overflow-hidden hover:border-[#5ba4a4] hover:shadow-md transition-all"
+            class="group flex items-center justify-between gap-4 p-5 border border-gray-200 rounded-2xl hover:border-[#5ba4a4] hover:shadow-sm transition-all"
           >
-            <div class="aspect-[4/3] overflow-hidden bg-gray-50">
-              <img
-                src={ex.thumb}
-                alt={ex.name}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
-            <div class="p-4 bg-white flex items-center justify-between gap-2">
-              <span class="font-semibold text-gray-700 text-sm leading-tight">{ex.name}</span>
-              <span class="text-gray-300 group-hover:text-[#5ba4a4] shrink-0 text-lg transition-colors">←</span>
-            </div>
+            <span class="font-semibold text-gray-700 group-hover:text-[#5ba4a4] transition-colors">{ex.name}</span>
+            <span class="text-gray-300 group-hover:text-[#5ba4a4] shrink-0 text-lg transition-colors">←</span>
           </a>
         ))}
       </div>
