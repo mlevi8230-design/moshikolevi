@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const artworks = [
+  { src: '/images/exhibitions/התרחשות-מתמדת-2.jpg',  title: 'התרחשות מתמדת 2' },
+  { src: '/images/exhibitions/משקל-המחשבות.jpg',      title: 'משקל המחשבות' },
+  { src: '/images/exhibitions/נגן-2.jpg',              title: 'נגן #2' },
+  { src: '/images/exhibitions/בין-אחיזה-לנפילה.jpg',  title: 'בין אחיזה לנפילה' },
+  { src: '/images/exhibitions/התרחשות-מתמדת-5.jpg',  title: 'התרחשות מתמדת 5' },
+  { src: '/images/exhibitions/נגן-1.jpg',              title: 'נגן #1' },
+  { src: '/images/exhibitions/artwork-unnamed-1.jpg',  title: '' },
+  { src: '/images/exhibitions/התרחשות-מתמדת-4.jpg',  title: 'התרחשות מתמדת 4' },
+  { src: '/images/exhibitions/where-is-my-mind.jpg',  title: 'Where Is My Mind' },
+  { src: '/images/exhibitions/התבוננות.jpg',           title: 'התבוננות' },
+  { src: '/images/exhibitions/שק-הדמעות.jpg',          title: 'שק הדמעות' },
+  { src: '/images/exhibitions/צעד-אמיץ-2.jpg',         title: 'צעד אמיץ 2' },
+  { src: '/images/exhibitions/צעד-אמיץ-1.jpg',         title: 'צעד אמיץ 1' },
+  { src: '/images/exhibitions/סבין.jpg',               title: 'סבין' },
+  { src: '/images/exhibitions/פסק-זמן-2.jpg',          title: 'פסק זמן #2' },
+  { src: '/images/exhibitions/מחוך-2.jpg',             title: 'מחוך #2' },
+  { src: '/images/exhibitions/מעגלי-תודעה-2.jpg',      title: 'מעגלי תודעה #2' },
+  { src: '/images/exhibitions/התכנסות.jpg',            title: 'התכנסות' },
+  { src: '/images/exhibitions/פסק-זמן-1.jpg',          title: 'פסק זמן #1' },
+  { src: '/images/exhibitions/מחוך-1.jpg',             title: 'מחוך #1' },
+  { src: '/images/exhibitions/מעגלי-תודעה-1.jpg',      title: 'מעגלי תודעה #1' },
+  { src: '/images/exhibitions/ראש-ברזל.jpg',           title: 'ראש ברזל' },
+  { src: '/images/exhibitions/מדוזה-1.jpg',            title: 'מדוזה #1' },
+  { src: '/images/exhibitions/מחשבות-סומרות.jpg',      title: 'מחשבות סומרות' },
+  { src: '/images/exhibitions/גמישות.jpg',             title: 'גמישות' },
+  { src: '/images/exhibitions/מחוך-3.jpg',             title: 'מחוך #3' },
+  { src: '/images/exhibitions/מעגלי-תודעה-3.jpg',      title: 'מעגלי תודעה #3' },
+  { src: '/images/exhibitions/ליצן.jpg',               title: 'ליצן' },
+  { src: '/images/exhibitions/japan.jpg',              title: 'Japan' },
+  { src: '/images/exhibitions/warrior.jpg',            title: 'Warrior' },
+  { src: '/images/exhibitions/artwork-unnamed-2.jpg',  title: '' },
+  { src: '/images/exhibitions/אהבה-יפנית.jpg',         title: 'אהבה יפנית' },
+  { src: '/images/exhibitions/lion.jpg',               title: 'Lion' },
+  { src: '/images/exhibitions/1000days.jpg',           title: '1000 Days' },
+  { src: '/images/exhibitions/artwork-unnamed-3.jpg',  title: '' },
+  { src: '/images/exhibitions/שקטה.jpg',              title: 'שקטה' },
+  { src: '/images/exhibitions/בייבי-בודהה.jpg',        title: 'בייבי בודהה' },
+  { src: '/images/exhibitions/דיקומפוז.jpg',           title: 'דיקומפוז' },
+  { src: '/images/exhibitions/סיבוב-חופשי.jpg',        title: 'סיבוב חופשי' },
+  { src: '/images/exhibitions/מיצי.jpg',              title: 'מיצי' },
+  { src: '/images/exhibitions/עצנדיב.jpg',             title: 'עצנדיב' },
+  { src: '/images/exhibitions/wimm-moshiko.jpg',       title: 'רומינציה' },
+  { src: '/images/exhibitions/exhibit-photo-1.jpg',   title: '' },
+  { src: '/images/exhibitions/exhibit-photo-2.jpg',   title: '' },
+  { src: '/images/exhibitions/exhibit-photo-3.jpg',   title: '' },
+  { src: '/images/exhibitions/exhibit-photo-4.jpg',   title: '' },
+  { src: '/images/exhibitions/exhibit-photo-5.jpg',   title: '' },
+  { src: '/images/exhibitions/exhibit-photo-6.jpg',   title: '' },
+  { src: '/images/exhibitions/exhibit-photo-7.jpg',   title: '' },
+];
+
+const galleryPhotos = [
+  '/images/exhibitions/wimm-gallery-1.jpg',
+  '/images/exhibitions/wimm-gallery-2.jpg',
+  '/images/exhibitions/wimm-gallery-3.jpg',
+];
+---
+
+<BaseLayout title="WHERE IS MY MIND?" description="תערוכת יחיד — WHERE IS MY MIND, גלריית מרכב הבמה. ציורים ופסלים של מושיקו לוי">
+
+  <section class="max-w-4xl mx-auto px-6 pt-10 pb-16">
+
+    <!-- חזרה -->
+    <a href="/art/exhibitions" class="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-[#5ba4a4] transition-colors mb-8">
+      <span>→</span> חזרה לתערוכות
+    </a>
+
+    <!-- כותרת -->
+    <h1 class="text-3xl font-bold text-gray-800 mb-1 text-center">WHERE IS MY MIND?</h1>
+    <p class="text-center text-gray-400 text-sm mb-2">תערוכת יחיד · גלריית מרכב הבמה</p>
+    <p class="text-center text-gray-500 text-sm leading-relaxed mb-10 max-w-xl mx-auto">
+      חלון אל התודעה של ציייר ופסלת, כאשר המפגש ביניהם מציג את העיסוק האינסופי במוח האדם, המניע אותו ליצור.
+      <span class="block text-gray-400 italic mt-1">SO WHERE IS YOUR MIND?</span>
+    </p>
+
+    <!-- פוסטר -->
+    <div class="flex justify-center mb-12">
+      <div class="rounded-xl overflow-hidden shadow-sm" style="max-width: 300px;">
+        <img src="/images/exhibitions/wimm-poster.jpg" alt="פוסטר WHERE IS MY MIND" class="w-full" loading="lazy" />
+      </div>
+    </div>
+
+    <!-- יצירות -->
+    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-4">יצירות</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-14">
+      {artworks.map(art => (
+        <div class="group">
+          <div class="aspect-[3/4] overflow-hidden rounded-lg bg-gray-50">
+            <img
+              src={art.src}
+              alt={art.title || 'יצירה'}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          {art.title && (
+            <p class="text-xs text-gray-500 mt-1.5 text-center leading-tight">{art.title}</p>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <!-- תמונות חלל -->
+    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-4">מחלל התערוכה</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      {galleryPhotos.map(src => (
+        <div class="rounded-xl overflow-hidden">
+          <img
+            src={src}
+            alt="חלל התערוכה"
+            class="w-full object-cover"
+            style="height: 180px; object-position: center;"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+
+  </section>
+
+</BaseLayout>
