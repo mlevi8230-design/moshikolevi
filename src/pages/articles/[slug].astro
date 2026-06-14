@@ -27,6 +27,18 @@ const next = articles[idx + 1] || null;
 
     <h1 class="text-3xl font-bold text-gray-800 mb-8 leading-snug">{article.title}</h1>
 
+    {article.image && (
+      <div class="mb-8 rounded-xl overflow-hidden shadow-sm">
+        <img
+          src={article.image}
+          alt={article.title}
+          class="w-full object-cover"
+          style="max-height: 320px; object-position: center;"
+          loading="lazy"
+        />
+      </div>
+    )}
+
     <div class="prose prose-gray max-w-none text-gray-700 leading-relaxed space-y-5 text-[1.05rem]">
       {paragraphs.map(p => (
         <p>{p}</p>
