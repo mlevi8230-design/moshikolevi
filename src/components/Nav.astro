@@ -89,7 +89,10 @@ const homeHref = isArtPage ? '/art' : isMeditationPage ? '/meditation' : '/';
         </a>
       ))}
       {!isArtPage && (
-        <a href="/art" class="block py-3 text-sm text-gray-500 hover:text-[#5ba4a4]">אמנות</a>
+        <a href="/art" class="block py-3 text-sm border-b border-gray-50 text-gray-500 hover:text-[#5ba4a4]">אמנות</a>
+      )}
+      {isArtPage && (
+        <a href="/" class="block py-3 text-sm border-b border-gray-50 text-gray-500 hover:text-[#5ba4a4]">טיפול</a>
       )}
       <div class="pt-3 pb-2">
         <a href="/contact" class="btn-teal text-sm text-center w-full block">ליצירת קשר</a>
