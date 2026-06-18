@@ -1,14 +1,11 @@
-# moshikolevi.com — אתר אישי של מושיקו לוי
-## תיעוד לעבודה עם Claude Code
-
----
+# moshikolevi.com — הוראות לעבודה עם Claude Code
 
 ## סקירה כללית
+אתר אישי של מושיקו לוי — מטפל ואמן. כולל שני חלקים:
+- **טיפול** — שיטת טיפול, מאמרים, יצירת קשר
+- **אמנות** — גלריה, תערוכות, ציור על פי תמונה, ציורי הנצחה
 
-אתר תדמית אישי עבור מושיקו לוי — מטפל קוגנטיבי-חוויתי וצייר.
-מחליף את אתר Wix הקיים. מתארח על Cloudflare Pages — חינמי לנצח.
-
-**כתובת חיה (עתידית):** https://moshikolevi.com
+**כתובת חיה:** https://www.moshikolevi.com  
 **תיקיית פרויקט:** `C:\Users\moshe.l\Documents\moshikolevi`
 
 ---
@@ -17,10 +14,11 @@
 
 | טכנולוגיה | שימוש |
 |-----------|-------|
-| Astro | Static Site Generator |
+| Astro v6.3.7 | Static Site Generator |
 | Tailwind CSS v4 | עיצוב |
-| Cloudflare Pages | אירוח (חינמי, unlimited bandwidth) |
-| GitHub | קוד + auto-deploy trigger |
+| Cloudflare Pages | אחסון + פרסום אוטומטי |
+| GitHub | קוד בענן (mlevi8230-design/moshikolevi) |
+| Wix | רשם דומיין בלבד עד 2027 |
 
 ---
 
@@ -33,121 +31,59 @@ moshikolevi/
 │   │   ├── index.astro          — דף הבית (טיפול)
 │   │   ├── treatment.astro      — שיטת הטיפול
 │   │   ├── about.astro          — קצת עליי
-│   │   ├── articles.astro       — מאמרים (רשימה)
-│   │   ├── articles/[slug].astro — מאמר בודד
 │   │   ├── contact.astro        — יצירת קשר
-│   │   ├── art.astro            — אמנות (דף ראשי)
-│   │   ├── gallery.astro        — גלריה
-│   │   ├── for-sale.astro       — ציורים למכירה
-│   │   ├── portrait.astro       — ציור על פי תמונה
-│   │   ├── custom.astro         — ציור בהזמנה אישית
-│   │   ├── exhibitions.astro    — תערוכות
-│   │   └── meditation.astro     — מדיטציה
-│   ├── layouts/
-│   │   ├── BaseLayout.astro     — layout כללי (nav + footer)
-│   │   ├── TherapyLayout.astro  — layout לאתר הטיפול
-│   │   └── ArtLayout.astro      — layout לאתר האמנות
+│   │   ├── articles/
+│   │   │   ├── index.astro      — רשימת מאמרים
+│   │   │   └── [slug].astro     — תבנית מאמר בודד
+│   │   └── art/
+│   │       ├── index.astro      — דף אמנות ראשי
+│   │       ├── gallery.astro    — גלריה
+│   │       ├── portrait.astro   — ציור על פי תמונה
+│   │       ├── memorial.astro   — ציורי הנצחה
+│   │       ├── for-sale.astro   — ציורים למכירה
+│   │       └── exhibitions/
+│   │           ├── index.astro  — דף תערוכות ראשי
+│   │           └── wimm.astro   — WHERE IS MY MIND
 │   ├── components/
-│   │   ├── Nav.astro            — ניווט ראשי
-│   │   ├── Footer.astro         — footer עם קשר + רשתות
-│   │   ├── Testimonials.astro   — קרוסלת המלצות
-│   │   ├── GalleryGrid.astro    — גריד תמונות + lightbox
-│   │   └── ContactForm.astro    — טופס יצירת קשר
-│   ├── content/
-│   │   └── articles/            — מאמרים כקבצי Markdown
-│   │       └── example.md
-│   └── styles/
-│       └── global.css           — Tailwind imports + CSS משותף
-├── public/
-│   └── images/
-│       ├── gallery/             — תמונות גלריה
-│       ├── for-sale/            — ציורים למכירה
-│       └── about/               — תמונות אישיות (פרופיל, קליניקה)
-├── .mcp.json                    — Astro Docs MCP
-├── astro.config.mjs
-├── wrangler.toml                — Cloudflare Pages config
-└── package.json
+│   │   └── Nav.astro            — ניווט עליון
+│   ├── layouts/
+│   │   └── BaseLayout.astro     — Layout בסיסי
+│   └── data/
+│       └── articles.json        — תוכן המאמרים
+└── public/
+    └── images/
+        ├── home/                — תמונות דף הבית
+        ├── about/               — תמונות "קצת עליי"
+        ├── gallery/             — תמונות גלריה
+        ├── portrait/            — תמונות ציור על פי תמונה
+        ├── exhibitions/         — תמונות תערוכות
+        └── for-sale/            — תמונות ציורים למכירה
 ```
 
 ---
 
-## עיצוב
-
-**סגנון:** נקי, בהיר, מינימליסטי — מתאים לטיפול ואמנות
-**כיוון:** RTL (עברית)
-**פלטת צבעים:** לבן/אפור בהיר + акцент сине-фиолетовый (כמו הוויקס הנוכחי)
-**גופנים:** Heebo (עברית, Google Fonts)
-**Mobile-first** — חיוני מאוד
-
----
-
-## ניווט — 3 עולמות
-
-```
-[טיפול]  [אמנות]  [מדיטציה]
-```
-
-כל עולם עם תת-ניווט משלו.
-
----
-
-## תוכן — דפי הטיפול
-
-| דף | תיאור |
-|----|-------|
-| index | היכרות + המלצות + CTA |
-| treatment | LI-CBT / CBT / ACT הסבר |
-| about | ביוגרפיה + תמונה |
-| articles | רשימת מאמרים (מ-Markdown) |
-| contact | טלפון + מייל + רשתות |
-
-## תוכן — דפי האמנות
-
-| דף | תיאור |
-|----|-------|
-| art | דף ראשי עם וידאו + תקציר |
-| gallery | גריד ציורים + lightbox |
-| for-sale | ציורים למכירה + כפתור WhatsApp |
-| portrait | ציור על פי תמונה + טופס |
-| custom | ציור בהזמנה אישית |
-| exhibitions | תערוכות שהיו |
-
----
-
-## פרטי קשר (לשימוש בכל הדפים)
-
-- **טלפון/WhatsApp:** 0542400106
-- **אימייל:** mlevi8230@gmail.com
-- **כתובת:** רחוב התבור 7, גני תקווה
-- **Instagram:** https://www.instagram.com/moshikoleviart/
-- **Facebook:** https://www.facebook.com/moshiko.levy.794
-
----
-
-## פקודות חשובות
+## פרסום
 
 ```bash
-# פיתוח מקומי
-npm run dev
-
-# בניה לפרסום
-npm run build
-
-# תצוגה מקדימה של build
-npm run preview
-
-# פרסום ל-Cloudflare (אחרי git push האתר מתפרסם אוטומטית)
-git add . && git commit -m "..." && git push
+git add .
+git commit -m "תיאור השינוי"
+git push origin master
+# האתר מתעדכן תוך ~2 דקות דרך Cloudflare Pages
 ```
 
 ---
 
-## הערות לפיתוח
+## כללים חשובים
 
-1. **RTL** — `dir="rtl"` על `<html>`, כל הממשק מימין לשמאל
-2. **Mobile-first** — עיצוב מובייל תמיד קודם, desktop ב-breakpoints
-3. **תמונות** — להשתמש ב-Astro `<Image>` component לאופטימיזציה
-4. **מאמרים** — Markdown ב-`src/content/articles/`, Astro Content Collections
-5. **גלריה** — תמונות ב-`public/images/gallery/`, לא לשכוח alt text בעברית
-6. **Auto-deploy** — כל `git push` ל-main מפרסם ל-Cloudflare Pages אוטומטית
-7. **דומיין** — moshikolevi.com מחובר ל-Cloudflare Pages (DNS עדכון ב-Wix)
+1. **RTL** — כל הטקסט עברית מימין לשמאל
+2. **תמונות** — נשמרות ב-`public/images/` לפי נושא
+3. **מאמרים** — נוספים ב-`src/data/articles.json` עם שדות: `slug, title, date, excerpt, content, image`
+4. **עיצוב** — Tailwind CSS v4, צבע ראשי `#5ba4a4` (ירוק-כחול)
+5. **Astro files** — Cloudflare בונה אוטומטית, אין צורך ב-build ידני
+
+---
+
+## DNS
+
+- `www.moshikolevi.com` — CNAME → `moshikolevi.pages.dev` (ב-Wix DNS)
+- הדומיין רשום ב-Wix עד יוני 2027

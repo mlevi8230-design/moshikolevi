@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>מדריך ניהול האתר — moshikolevi.com</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #222;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 40px 60px;
+    direction: rtl;
+  }
+  h1 {
+    font-size: 24px;
+    color: #1a2a3a;
+    border-bottom: 3px solid #5ba4a4;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+  h2 {
+    font-size: 17px;
+    color: #1a2a3a;
+    margin-top: 35px;
+    margin-bottom: 12px;
+    padding-right: 10px;
+    border-right: 4px solid #5ba4a4;
+  }
+  h3 {
+    font-size: 14px;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  p { margin-bottom: 10px; }
+  ul, ol { padding-right: 20px; margin-bottom: 12px; }
+  li { margin-bottom: 5px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 13px;
+  }
+  th {
+    background: #f0f8f8;
+    color: #1a2a3a;
+    padding: 8px 12px;
+    text-align: right;
+    border: 1px solid #d0e8e8;
+  }
+  td {
+    padding: 7px 12px;
+    border: 1px solid #e0e0e0;
+  }
+  tr:nth-child(even) td { background: #fafafa; }
+  code {
+    background: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    direction: ltr;
+    display: inline-block;
+  }
+  pre {
+    background: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    direction: ltr;
+    text-align: left;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+  blockquote {
+    background: #f0f8f8;
+    border-right: 4px solid #5ba4a4;
+    padding: 10px 16px;
+    margin: 12px 0;
+    color: #555;
+    border-radius: 0 6px 6px 0;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #e8e8e8;
+    margin: 30px 0;
+  }
+  .badge {
+    display: inline-block;
+    background: #5ba4a4;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  @media print {
+    body { margin: 20px; padding: 0 20px; }
+    h2 { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>מדריך ניהול האתר — moshikolevi.com</h1>
+
+<h2>מה זה בעצם?</h2>
+<p>האתר שלך בנוי מקבצי טקסט פשוטים שנמצאים במחשב שלך. כשאתה שומר שינוי ו"דוחף" אותו לאינטרנט — האתר מתעדכן תוך 2 דקות.</p>
+
+<hr>
+
+<h2>ספקי השירות</h2>
+<table>
+  <tr><th>ספק</th><th>תפקיד</th><th>עלות</th><th>כתובת</th></tr>
+  <tr><td><strong>GitHub</strong></td><td>מאחסן את קוד האתר בענן</td><td>חינם</td><td>github.com</td></tr>
+  <tr><td><strong>Cloudflare Pages</strong></td><td>בונה ומפרסם את האתר</td><td>חינם</td><td>dash.cloudflare.com</td></tr>
+  <tr><td><strong>Wix</strong></td><td>מחזיק את שם הדומיין בלבד (עד 2027)</td><td>~$10/שנה</td><td>wix.com</td></tr>
+</table>
+<blockquote>כניסה ל-GitHub ול-Cloudflare: עם <strong>mlevi8230@gmail.com</strong> (Sign in with Google)</blockquote>
+
+<hr>
+
+<h2>המסלול של כל שינוי</h2>
+<pre>אתה עורך קובץ במחשב
+        ↓
+Git — שומר את השינוי (כמו Ctrl+S עם זיכרון)
+        ↓
+GitHub — מאחסן את הקוד בענן
+        ↓
+Cloudflare Pages — בונה ומפרסם אוטומטית (~2 דקות)
+        ↓
+www.moshikolevi.com — האתר החי</pre>
+
+<hr>
+
+<h2>איך Claude מתחיל שיחה חדשה</h2>
+<p>בתיקיית הפרויקט קיים קובץ <code>CLAUDE.md</code> — Claude קורא אותו <strong>אוטומטית</strong> בתחילת כל שיחה ויודע מיד מה הפרויקט, איך הוא בנוי ואיך לפרסם. אין צורך להסביר מחדש.</p>
+
+<hr>
+
+<h2>כדי לערוך, פתח 3 דברים:</h2>
+<ol>
+  <li><strong>VSCode</strong> — תוכנת עריכת הקבצים</li>
+  <li><strong>תיקיית הפרויקט</strong> — <code>C:\Users\moshe.l\Documents\moshikolevi</code>
+    <br>ב-VSCode: File → Open Folder → בחר את התיקייה</li>
+  <li><strong>Claude Code</strong> — הסייען שעורך עבורך
+    <br>ב-VSCode: Ctrl+Shift+P → הקלד "Claude"</li>
+</ol>
+
+<hr>
+
+<h2>איך לבקש שינוי</h2>
+<p>פשוט כתוב לי מה אתה רוצה. לדוגמה:</p>
+<ul>
+  <li>"שנה את הטקסט בדף הבית ל..."</li>
+  <li>"הוסף תמונה לדף הגלריה"</li>
+  <li>"הוסף מאמר חדש בשם..."</li>
+</ul>
+<p>אני אמצא את הקובץ, אערוך אותו, ואפרסם — אתה לא צריך לנגוע בקוד.</p>
+
+<hr>
+
+<h2>פרסום לבד (אם צריך)</h2>
+<p>פתח טרמינל ב-VSCode (<code>Ctrl+`</code>) והדבק בזו אחר זו:</p>
+<pre>git add .
+git commit -m "תיאור מה שינית"
+git push origin master</pre>
+<p>חכה 2 דקות → האתר מתעדכן.</p>
+
+<hr>
+
+<h2>איפה כל דף נמצא</h2>
+<table>
+  <tr><th>דף באתר</th><th>קובץ</th></tr>
+  <tr><td>דף הבית (טיפול)</td><td><code>src/pages/index.astro</code></td></tr>
+  <tr><td>שיטת הטיפול</td><td><code>src/pages/treatment.astro</code></td></tr>
+  <tr><td>קצת עליי</td><td><code>src/pages/about.astro</code></td></tr>
+  <tr><td>יצירת קשר</td><td><code>src/pages/contact.astro</code></td></tr>
+  <tr><td>מאמרים — רשימה</td><td><code>src/pages/articles/index.astro</code></td></tr>
+  <tr><td>מאמרים — תוכן</td><td><code>src/data/articles.json</code></td></tr>
+  <tr><td>אמנות — ראשי</td><td><code>src/pages/art/index.astro</code></td></tr>
+  <tr><td>גלריה</td><td><code>src/pages/art/gallery.astro</code></td></tr>
+  <tr><td>ציור על פי תמונה</td><td><code>src/pages/art/portrait.astro</code></td></tr>
+  <tr><td>ציורי הנצחה</td><td><code>src/pages/art/memorial.astro</code></td></tr>
+  <tr><td>תערוכות — ראשי</td><td><code>src/pages/art/exhibitions/index.astro</code></td></tr>
+  <tr><td>WHERE IS MY MIND</td><td><code>src/pages/art/exhibitions/wimm.astro</code></td></tr>
+  <tr><td>ניווט עליון</td><td><code>src/components/Nav.astro</code></td></tr>
+</table>
+
+<hr>
+
+<h2>איפה שמים תמונות חדשות</h2>
+<table>
+  <tr><th>נושא</th><th>תיקייה</th></tr>
+  <tr><td>דף הבית / טיפול</td><td><code>public/images/home/</code></td></tr>
+  <tr><td>קצת עליי</td><td><code>public/images/about/</code></td></tr>
+  <tr><td>גלריה</td><td><code>public/images/gallery/</code></td></tr>
+  <tr><td>ציור על פי תמונה</td><td><code>public/images/portrait/</code></td></tr>
+  <tr><td>תערוכות</td><td><code>public/images/exhibitions/</code></td></tr>
+  <tr><td>ציורים למכירה</td><td><code>public/images/for-sale/</code></td></tr>
+</table>
+<p><strong>איך מוסיפים תמונה:</strong> שמור את הקובץ בתיקייה המתאימה → תגיד לי → אני אוסיף לדף הנכון.</p>
+
+<hr>
+
+<h2>אם משהו לא עובד</h2>
+<p>כנס ל-<strong>dash.cloudflare.com</strong> עם Gmail → <strong>Workers &amp; Pages</strong> → <strong>moshikolevi</strong> → בדוק שהפרסום האחרון מסומן ✓</p>
+<p>אם יש ✗ אדום — שלח לי צילום מסך ואני אתקן.</p>
+
+<hr>
+
+<h2>כתובות שימושיות</h2>
+<table>
+  <tr><th>מה</th><th>כתובת</th></tr>
+  <tr><td>האתר החי</td><td>www.moshikolevi.com</td></tr>
+  <tr><td>גיבוי (זהה)</td><td>moshikolevi.pages.dev</td></tr>
+  <tr><td>קוד בענן</td><td>github.com/mlevi8230-design/moshikolevi</td></tr>
+  <tr><td>לוח Cloudflare</td><td>dash.cloudflare.com</td></tr>
+</table>
+
+</body>
+</html>
